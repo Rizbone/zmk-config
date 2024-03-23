@@ -1824,7 +1824,7 @@
 				// ----------------------------------------
 		
 				&none
-				&kp LG(LA(SPACE))
+				&kp LG(LA(LC(P)))
 				&mAlterShift				
 				&mPNAVShift					
 				&mNavShift					
@@ -1932,8 +1932,8 @@
 
 				&kp ESC	
 				&kp RBKT  				// +
-				&kp GRAVE				// Spitze
-				&kp LS(GRAVE)			// Spitze
+				&kp NUBS				// Spitze
+				&kp LS(NUBS)			// Spitze
 				&kp RA(N2)				// hoch 2
 				&kp X
 				
@@ -1967,7 +1967,7 @@
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
 				&kp LA(LC(E))			// €
-				&kp NUBS				// ^
+				&kp GRAVE				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -2076,8 +2076,8 @@
 
 				&kp ESC	
 				&kp RBKT  				// +
-				&kp GRAVE				// Spitze
-				&kp LS(GRAVE)			// Spitze
+				&kp NUBS				// Spitze
+				&kp LS(NUBS)			// Spitze
 				&kp RA(N2)				// hoch 2
 				&kp X
 				
@@ -2111,7 +2111,7 @@
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
 				&kp LA(LC(E))			// €
-				&kp NUBS				// ^
+				&kp GRAVE				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -2520,8 +2520,8 @@
 				
 				&kp ESC
 				&kp RBKT  				// +
-				&kp GRAVE				// Spitze
-				&kp LS(GRAVE)			// Spitze
+				&kp NUBS				// Spitze
+				&kp LS(NUBS)			// Spitze
 				&kp RA(N2)				// hoch 2
 				&kp X
 				
@@ -2555,7 +2555,7 @@
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
 				&kp LA(LC(E))			// €
-				&kp NUBS				// ^
+				&kp GRAVE				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
