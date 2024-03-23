@@ -991,7 +991,7 @@
 				
 				// ----------------------------------------
 
-				&kp LCTRL
+				&kp LSHFT
 				&kp LG(LEFT)				// @Home 
 				&kp LA(LEFT)				// @Wort Sprung
 				&kp LA(RIGHT)				// @Wort Sprung
