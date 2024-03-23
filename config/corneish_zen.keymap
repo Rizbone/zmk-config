@@ -1824,7 +1824,7 @@
 				// ----------------------------------------
 		
 				&none
-				&kp LG(LA(LC(P)))
+				&kp LG(LS(SPACE))
 				&mAlterShift				
 				&mPNAVShift					
 				&mNavShift					
