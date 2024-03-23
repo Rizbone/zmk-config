@@ -1709,11 +1709,11 @@
 				&bt BT_SEL 3
 				&none
 
-				&kp LC(LA(LG(F11))) 					
-				&kp LC(LA(LG(F12))) 
-				&kp LC(LA(LG(F13))) 
-				&kp LC(LA(LG(F14))) 
-				&kp LC(LA(LG(F15))) 
+				&kp LG(LC(F1)) 					
+				&kp LG(LC(F2)) 					
+				&kp LG(LC(F3)) 					
+				&kp LG(LC(F4)) 					
+				&kp LG(LC(F5)) 
 				&kp DEL				//
 
 				// ----------------------------------------
@@ -1782,11 +1782,11 @@
 				&none
 				&bt BT_CLR
 
-				&kp LA(LG(F11)) 					
-				&kp LA(LG(F12)) 
-				&kp LA(LG(F13)) 
-				&kp LA(LG(F14)) 
-				&kp LG(L) 
+				&kp LG(LC(F6)) 					
+				&kp LG(LC(F7)) 					
+				&kp LG(LC(F8)) 					
+				&kp LG(LC(F9)) 					
+				&kp LG(LC(F10)) 
 				&kp DEL				//
 
 				// ----------------------------------------
@@ -2894,11 +2894,11 @@
 				&bt BT_SEL 3
 				&bt BT_CLR
 
-				&kp LA(LG(LC(F11))) 					
-				&kp LA(LG(LC(F12))) 					
-				&kp LA(LG(LC(F13))) 					
-				&kp LA(LG(LC(F14))) 					
-				&kp LA(LG(LC(F15)))  					
+				&kp LG(LC(F1)) 					
+				&kp LG(LC(F2)) 					
+				&kp LG(LC(F3)) 					
+				&kp LG(LC(F4)) 					
+				&kp LG(LC(F5)) 						
 				&kp DEL				//
 
 				// ----------------------------------------
@@ -2966,11 +2966,11 @@
 				&bt BT_SEL 3
 				&bt BT_CLR
 
-				&kp LA(LG(F11)) 					
-				&kp LA(LG(F12)) 					
-				&kp LA(LG(F13)) 					
-				&kp LA(LG(F14)) 					
-				&kp LA(LG(F15))  					
+				&kp LG(LC(F6)) 					
+				&kp LG(LC(F7)) 					
+				&kp LG(LC(F8)) 					
+				&kp LG(LC(F9)) 					
+				&kp LG(L) 					
 				&kp DEL				//
 
 				// ----------------------------------------
@@ -3002,7 +3002,7 @@
 				&kp LA(LG(F7)) 					
 				&kp LA(LG(F8)) 					
 				&kp LA(LG(F9)) 					
-				&kp LA(LG(F10)) 					 					
+				&kp LA(LG(F10)) 					
 				&turnOnWin
 
 				// ----------------------------------------
