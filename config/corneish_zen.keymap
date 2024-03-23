@@ -964,9 +964,9 @@
 				&kp LS(TAB)
 				&kp UP						// @Up
 				&kp TAB
-				&kp LG(LA(F16))	
+				&kp LC(BSLH)	
 		
-				&kp LG(LA(F17))				 
+				&kp LC(PAGE_UP)				 
 				&kp LC(GRAVE)			
 				&kp PG_UP
 				&kp LC(EQUAL)
@@ -982,7 +982,7 @@
 				&kp RIGHT 					// @Right
 				&kp LC(DOT)			 	// 
 
-				&kp LC(LS(F10))		
+				&kp LC(PAGE_DOWN)		
 				&kp LS(LC(TAB))				 
 				&kp PG_DN
 				&kp LC(TAB)				 	
@@ -996,9 +996,9 @@
 				&kp LA(LEFT)				// @Wort Sprung
 				&kp LA(RIGHT)				// @Wort Sprung
 				&kp LG(RIGHT)				// @End  
-				&kp LG(LA(F18))	
+				&mFuncMarkLine	
 
-				&kp LG(LA(F19))	 	
+				&kp LC(LS(F10))		
 				&kp LG(LS(LEFT))				// @Home 
 				&kp LA(LS(LEFT))				// @Wort Sprung
 				&kp LA(LS(RIGHT))				// @Wort Sprung
@@ -2152,9 +2152,9 @@
 				&kp LS(TAB)
 				&kp UP						// @Up
 				&kp TAB
-				&kp LG(LA(F16))
+				&kp LC(BSLH)
 
-				&kp LG(LA(F17))
+				&kp LC(PAGE_UP)
 				&kp LC(GRAVE)				
 				&kp PG_UP
 				&kp LC(EQUAL)		 	 
@@ -2170,7 +2170,7 @@
 				&kp RIGHT 					// @Right
 				&kp LC(DOT)				 	// 
 
-				&kp LC(LS(F10))
+				&kp LC(PAGE_DOWN)
 				&kp LS(LC(TAB))			 	// 
 				&kp PG_DN
 				&kp LC(TAB)				 	// 
@@ -2184,9 +2184,9 @@
 				&kp LC(LEFT)				// @Wort Sprung
 				&kp LC(RIGHT)				// @Wort Sprung
 				&kp END
-				&kp LG(LA(F18))
+				&wFuncMarkLine
 
-				&kp LG(LA(F19))
+				&kp LC(LS(F10))
 				&kp LS(HOME)					// @Home 
 				&kp LS(LC(LEFT))				// @Wort Sprung
 				&kp LS(LC(RIGHT))				// @Wort Sprung
