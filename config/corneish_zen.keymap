@@ -744,8 +744,8 @@
 
 				&kp ESC	
 				&kp RBKT  				// +
-				&kp NUBS				// Spitze
-				&kp LS(NUBS)			// Spitze
+				&kp GRAVE				// Spitze
+				&kp LS(GRAVE)			// Spitze
 				&kp GRAVE				// ^
 				&kp X
 				
@@ -779,7 +779,7 @@
 				&kp LS(LA(N7))			// backlslash
 				&kp LS(N5)				// %
 				&kp LA(E)				// €
-				&kp GRAVE				// ^
+				&kp NUBS				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -861,7 +861,7 @@
 
 				// ----------------------------------------
 
-				&sl mSYM
+				&mSymReset
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
@@ -888,8 +888,8 @@
 
 				&kp ESC	
 				&kp RBKT  				// +
-				&kp NUBS				// Spitze
-				&kp LS(NUBS)			// Spitze
+				&kp GRAVE				// Spitze
+				&kp LS(GRAVE)			// Spitze
 				&kp GRAVE				// ^
 				&kp X
 				
@@ -923,7 +923,7 @@
 				&kp LS(LA(N7))			// backlslash
 				&kp LS(N5)				// %
 				&kp LA(E)				// €
-				&kp GRAVE				// ^
+				&kp NUBS				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -1333,8 +1333,8 @@
 				
 				&kp ESC
 				&kp RBKT  				// +
-				&kp NUBS				// Spitze
-				&kp LS(NUBS)			// Spitze
+				&kp GRAVE				// Spitze
+				&kp LS(GRAVE)			// Spitze
 				&kp GRAVE				// ^
 				&kp X
 				
@@ -1368,7 +1368,7 @@
 				&kp LS(LA(N7))			// backlslash
 				&kp LS(N5)				// %
 				&kp LA(E)				// €
-				&kp GRAVE				// ^
+				&kp NUBS				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -1629,32 +1629,32 @@
 
 				&kp LG(LA(ENTER))			// 
 				&none						//
-				&kp LG(LA(LS(LEFT)))		 
+				&kp LS(TAB)						
 				&kp LG(LA(UP))				// 
-				&kp LG(LA(LS(RIGHT)))			
+				&kp TAB						
 				&none						// 
 
-				&kp LA(LG(F11)) 					
-				&kp LA(LG(F12))					
-				&kp LA(LG(F13)) 					
-				&kp LA(LG(F14))					
-				&kp LA(LG(F15)) 
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&kp BACKSPACE				//
 
 				// ----------------------------------------
 		
 				&none						//
-				&none						//
+				&kp LG(LA(LS(LEFT)))		 
 				&kp LG(LA(LEFT))			// 
 				&kp LG(LA(DOWN))			// 
 				&kp LG(LA(RIGHT))			// 
-				&none						// 
+				&kp LG(LA(LS(RIGHT)))			
 
-				&kp LA(LG(F1)) 					
-				&kp LA(LG(F2))					
-				&kp LA(LG(F3)) 					
-				&kp LA(LG(F4))					
-				&kp LA(LG(F5)) 
+				&none						//
+				&kp LGUI					//
+				&none						// 
+				&none						//
+				&none						// 
 				&none						//
 
 				// ----------------------------------------
@@ -1666,11 +1666,11 @@
 				&none						// 
 				&none						// 
 
-				&kp LA(LG(F6)) 					
-				&kp LA(LG(F7))					
-				&kp LA(LG(F8)) 					
-				&kp LA(LG(F9))					
-				&kp LA(LG(F10)) 
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&none						//
 
 				// ----------------------------------------
@@ -1824,7 +1824,7 @@
 				// ----------------------------------------
 		
 				&none
-				&kp LG(LS(SPACE))
+				&kp LG(LA(SPACE))
 				&mAlterShift				
 				&mPNAVShift					
 				&mNavShift					
@@ -1932,8 +1932,8 @@
 
 				&kp ESC	
 				&kp RBKT  				// +
-				&kp NUBS				// Spitze
-				&kp LS(NUBS)			// Spitze
+				&kp GRAVE				// Spitze
+				&kp LS(GRAVE)			// Spitze
 				&kp RA(N2)				// hoch 2
 				&kp X
 				
@@ -1967,7 +1967,7 @@
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
 				&kp LA(LC(E))			// €
-				&kp GRAVE				// ^
+				&kp NUBS				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -2049,7 +2049,7 @@
 
 				// ----------------------------------------
 
-				&sl mSYM
+				&wSymReset
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
@@ -2076,8 +2076,8 @@
 
 				&kp ESC	
 				&kp RBKT  				// +
-				&kp NUBS				// Spitze
-				&kp LS(NUBS)			// Spitze
+				&kp GRAVE				// Spitze
+				&kp LS(GRAVE)			// Spitze
 				&kp RA(N2)				// hoch 2
 				&kp X
 				
@@ -2111,7 +2111,7 @@
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
 				&kp LA(LC(E))			// €
-				&kp GRAVE				// ^
+				&kp NUBS				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -2310,7 +2310,7 @@
 				&none
 				&none
 				&none
-				&kp LC(LS(F10))			// Task Manager
+				&kp LC(LS(ESC))			// Task Manager
 		
 				// ----------------------------------------
 
@@ -2520,8 +2520,8 @@
 				
 				&kp ESC
 				&kp RBKT  				// +
-				&kp NUBS				// Spitze
-				&kp LS(NUBS)			// Spitze
+				&kp GRAVE				// Spitze
+				&kp LS(GRAVE)			// Spitze
 				&kp RA(N2)				// hoch 2
 				&kp X
 				
@@ -2555,7 +2555,7 @@
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
 				&kp LA(LC(E))			// €
-				&kp GRAVE				// ^
+				&kp NUBS				// ^
 
 				&kp LS(N0)				// =
 				&kp DOT					// .
@@ -2813,18 +2813,18 @@
 
 				// ----------------------------------------
 
-				&kp LC(LA(ENTER))				//
+				&kp LC(LA(ENTER))			//
 				&none						//
-				&kp LC(LA(LS(LEFT)))		// 
+				&kp LS(TAB)
 				&kp LC(LA(UP))				// 
-				&kp LC(LA(LS(RIGHT)))		// 
+				&kp TAB
 				&none						// 
 
-				&kp LA(LG(F11)) 					
-				&kp LA(LG(F12))					
-				&kp LA(LG(F13)) 					
-				&kp LA(LG(F14))					
-				&kp LA(LG(F15)) 
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&kp BACKSPACE				//
 
 				// ----------------------------------------
@@ -2834,13 +2834,13 @@
 				&kp LC(LA(LEFT))			// 
 				&kp LC(LA(DOWN))			// 
 				&kp LC(LA(RIGHT))			// 
-				&none						// 
+				&none						//
 
-				&kp LA(LG(F1)) 					
-				&kp LA(LG(F2))					
-				&kp LA(LG(F3))					
-				&kp LA(LG(F4)) 					
-				&kp LA(LG(F5)) 	
+				&none						//
+				&kp LAlt					//
+				&none						// 
+				&none						//
+				&none						// 
 				&none						//
 
 				// ----------------------------------------
@@ -2852,11 +2852,11 @@
 				&none						// 
 				&none						// 
 
-				&kp LA(LG(F6)) 					
-				&kp LA(LG(F7))					
-				&kp LA(LG(F8)) 					
-				&kp LA(LG(F9))					
-				&kp LA(LG(F10)) 
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&none						//
 
 				// ----------------------------------------
