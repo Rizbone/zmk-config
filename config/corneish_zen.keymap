@@ -1691,7 +1691,7 @@
 
 
 		// -----------------------------------------------------|
-		// Layer 19 - mSideShift =	Side Shift					|
+		// Layer 18 - mSideShift =	Side Shift					|
 		// -----------------------------------------------------|
 
 		mac_mSShift
@@ -1707,7 +1707,7 @@
 				&bt BT_SEL 1
 				&bt BT_SEL 2
 				&bt BT_SEL 3
-				&bt BT_CLR
+				&none
 
 				&kp LC(LA(LG(F11))) 					
 				&kp LC(LA(LG(F12))) 
@@ -1776,10 +1776,10 @@
 				// ----------------------------------------
 
 				&kp ESC						// 
-				&bt BT_SEL 0
-				&bt BT_SEL 1
-				&bt BT_SEL 2
-				&bt BT_SEL 3
+				&none	
+				&none	
+				&kp C_VOL_UP
+				&none
 				&bt BT_CLR
 
 				&kp LA(LG(F11)) 					
@@ -1793,9 +1793,9 @@
 		
 				&mDeepShift
 				&none	
-				&none
-				&none
-				&wAltShot	
+				&kp K_MUTE
+				&kp C_VOL_DN
+				&kp C_PLAY
 				&none
 
 				&kp LA(LG(F1)) 					
@@ -1809,8 +1809,8 @@
 
 				&turnOnMac
 				&none
-				&none
-				&none
+				&kp C_NEXT
+				&kp C_PREV
 				&none
 				&none
 
