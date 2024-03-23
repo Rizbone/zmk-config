@@ -495,7 +495,7 @@
 
 
 		wFuncMarkLine: wFuncMarLine {
-            label = "wFuncMarkLnie";
+            label = "wFuncMarkLine";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -971,7 +971,7 @@
 				&kp PG_UP
 				&kp LC(EQUAL)
 				&kp LG(LS(UP))			
-				&kp DEL					// -
+				&kp BACKSPACE					// -
 
 				// ----------------------------------------
 
@@ -1310,7 +1310,7 @@
 				&mModSGuiReset
 				&trans						// 
 				&none
-				&mNavShift						//
+				&mNavShift					//
 				&none						//
 
 				// ----------------------------------------       
@@ -1714,7 +1714,7 @@
 				&kp LC(LA(LG(F13))) 
 				&kp LC(LA(LG(F14))) 
 				&kp LC(LA(LG(F15))) 
-				&kp BACKSPACE				//
+				&kp DEL				//
 
 				// ----------------------------------------
 		
@@ -1787,7 +1787,7 @@
 				&kp LA(LG(F13)) 
 				&kp LA(LG(F14)) 
 				&kp LA(LG(F15)) 
-				&kp BACKSPACE				//
+				&kp DEL				//
 
 				// ----------------------------------------
 		
@@ -2899,7 +2899,7 @@
 				&kp LA(LG(LC(F13))) 					
 				&kp LA(LG(LC(F14))) 					
 				&kp LA(LG(LC(F15)))  					
-				&kp BACKSPACE				//
+				&kp DEL				//
 
 				// ----------------------------------------
 		
@@ -2971,7 +2971,7 @@
 				&kp LA(LG(F13)) 					
 				&kp LA(LG(F14)) 					
 				&kp LA(LG(F15))  					
-				&kp BACKSPACE				//
+				&kp DEL				//
 
 				// ----------------------------------------
 		
