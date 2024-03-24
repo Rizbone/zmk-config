@@ -2969,7 +2969,7 @@
 				&kp LG(LC(F6)) 					
 				&kp LG(LC(F7)) 					
 				&kp LG(LC(F8)) 					
-				&kp LG(LC(F9)) 					
+				&kp LC(LA(DEL)) 					
 				&kp LG(L) 					
 				&kp DEL				//
 
