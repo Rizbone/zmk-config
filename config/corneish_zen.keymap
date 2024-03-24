@@ -966,11 +966,11 @@
 				&kp TAB
 				&kp LC(BSLH)	
 		
-				&kp LC(PAGE_UP)				 
+				&kp LG(LS(UP))				 
 				&kp LC(GRAVE)			
 				&kp PG_UP
 				&kp LC(EQUAL)
-				&kp LG(LS(UP))			
+				&kp LC(PAGE_UP)			
 				&kp BACKSPACE					// -
 
 				// ----------------------------------------
@@ -982,11 +982,11 @@
 				&kp RIGHT 					// @Right
 				&kp LC(DOT)			 	// 
 
-				&kp LC(PAGE_DOWN)		
+				&kp LG(LS(DOWN))					
 				&kp LS(LC(TAB))				 
 				&kp PG_DN
 				&kp LC(TAB)				 	
-				&kp LG(LS(DOWN))	
+				&kp LC(PAGE_DOWN)		
 				&kp ENTER					
 				
 				// ----------------------------------------
@@ -2154,11 +2154,11 @@
 				&kp TAB
 				&kp LC(BSLH)
 
-				&kp LC(PAGE_UP)
-				&kp LC(GRAVE)				
+				&kp LC(LS(HOME))
+				&kp LC(GRAVE)			
 				&kp PG_UP
 				&kp LC(EQUAL)		 	 
-				&kp LC(LS(HOME))
+				&kp LC(PAGE_UP)
 				&kp BSPC					
 
 				// ----------------------------------------
@@ -2170,11 +2170,11 @@
 				&kp RIGHT 					// @Right
 				&kp LC(DOT)				 	// 
 
-				&kp LC(PAGE_DOWN)
+				&kp LC(LS(END))
 				&kp LS(LC(TAB))			 	// 
 				&kp PG_DN
 				&kp LC(TAB)				 	// 
-				&kp LC(LS(END))
+				&kp LC(PAGE_DOWN)
 				&kp ENTER					// -
 				
 				// ----------------------------------------
