@@ -1705,7 +1705,7 @@
 				&kp ESC						// 
 				&none
 				&none
-				&none
+				&kp C_VOL_UP
 				&none
 				&none
 
@@ -1720,10 +1720,10 @@
 		
 				&mDeepShift
 				&none	
-				&none
-				&none
-				&kp LG(LA(LC(SPACE)))					
-				&none
+				&kp K_MUTE
+				&kp C_VOL_DN
+				&kp C_PLAY						
+				&kp LG(LA(LC(SPACE)))		
 
 				&kp LC(LA(LG(F1))) 					
 				&kp LC(LA(LG(F2))) 
@@ -1736,8 +1736,8 @@
 
 				&turnOnMac
 				&none
-				&none
-				&none
+				&kp C_NEXT
+				&kp C_PREV
 				&none
 				&none
 
@@ -2820,11 +2820,11 @@
 				&kp TAB
 				&none						// 
 
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
+				&bt BT_CLR
+				&bt BT_SEL 0
+				&bt BT_SEL 1
+				&bt BT_SEL 2
+				&bt BT_SEL 3
 				&kp BACKSPACE				//
 
 				// ----------------------------------------
@@ -2888,11 +2888,11 @@
 				// ----------------------------------------
 
 				&kp ESC						// 
-				&bt BT_SEL 0
-				&bt BT_SEL 1
-				&bt BT_SEL 2
-				&bt BT_SEL 3
-				&bt BT_CLR
+				&none
+				&none
+				&kp C_VOL_UP
+				&none
+				&none
 
 				&kp LG(LC(F1)) 					
 				&kp LG(LC(F2)) 					
@@ -2905,10 +2905,10 @@
 		
 				&wDeepShift
 				&none
-				&none
-				&none
+				&kp K_MUTE
+				&kp C_VOL_DN
+				&kp C_PLAY	
 				&wAltShot
-				&none
 
 				&kp LA(LG(LC(F1))) 					
 				&kp LA(LG(LC(F2))) 					
@@ -2921,8 +2921,8 @@
 
 				&turnOnMac
 				&none
-				&none
-				&none
+				&kp C_NEXT
+				&kp C_PREV
 				&none
 				&none
 
