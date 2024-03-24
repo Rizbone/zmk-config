@@ -964,7 +964,7 @@
 				&kp LS(TAB)
 				&kp UP						// @Up
 				&kp TAB
-				&kp LC(BSLH)	
+				&kp LG(LA(LC(SPACE)))	
 		
 				&kp LG(LS(UP))				 
 				&kp LC(GRAVE)			
@@ -1723,7 +1723,7 @@
 				&kp K_MUTE
 				&kp C_VOL_DN
 				&kp C_PLAY						
-				&kp LG(LA(LC(SPACE)))		
+				&none
 
 				&kp LC(LA(LG(F1))) 					
 				&kp LC(LA(LG(F2))) 
@@ -1796,7 +1796,7 @@
 				&kp K_MUTE
 				&kp C_VOL_DN
 				&kp C_PLAY
-				&kp LG(LA(LC(SPACE)))	
+				&none
 
 				&kp LA(LG(F1)) 					
 				&kp LA(LG(F2)) 
@@ -2152,7 +2152,7 @@
 				&kp LS(TAB)
 				&kp UP						// @Up
 				&kp TAB
-				&kp LC(BSLH)
+				&wAltShot
 
 				&kp LC(LS(HOME))
 				&kp LC(GRAVE)			
@@ -2908,7 +2908,7 @@
 				&kp K_MUTE
 				&kp C_VOL_DN
 				&kp C_PLAY	
-				&wAltShot
+				&none
 
 				&kp LA(LG(LC(F1))) 					
 				&kp LA(LG(LC(F2))) 					
@@ -2980,7 +2980,7 @@
 				&kp K_MUTE
 				&kp C_VOL_DN
 				&kp C_PLAY	
-				&wAltShot
+				&none
 
 				&kp LA(LG(F1)) 					
 				&kp LA(LG(F2)) 					
