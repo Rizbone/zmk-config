@@ -898,7 +898,7 @@
 
 				// ----------------------------------------
 
-				&mShiftReset
+				&mdLs
 				&kp LS(N7)				// /
 				&kp LS(LA(N7))			// backlslash
 				&kp LS(N5)				// %
@@ -910,7 +910,7 @@
 				&kp COMMA				// ,
 				&kp LS(SLASH)			// _
 				&kp SLASH 				// -
-				&mShiftReset
+				&mdRs
 
 				// ----------------------------------------
 		
@@ -2763,7 +2763,7 @@
 				&kp LS(N4) 				// $
 				&trans					//
 
-				&kp LA(N)				// ~
+				&kp LC(LA(RBRC))		// ~
 				&trans
 				&kp RA(N7)				// Geschweift
 				&kp RA(N0)				// Geschweift
