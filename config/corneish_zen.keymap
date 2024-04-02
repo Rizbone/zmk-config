@@ -2137,20 +2137,20 @@
 				&wAltShot
 
 				&kp LC(LS(HOME))
-				&kp LC(LA(KC_L))			
+				&kp LC(LA(L))			
 				&kp PG_UP
-				&kp LC(LA(KC_R))		 	 
+				&kp LC(LA(R))		 	 
 				&kp LC(PAGE_UP)
 				&kp BSPC					
 
 				// ----------------------------------------
 
-				&kp LC(LA(KC_B))	
+				&kp LC(LA(B))	
 				&kp LC(END)					// @End Sprung
 				&kp LEFT 					// @Left
 				&kp DOWN					// @Down
 				&kp RIGHT 					// @Right
-				&kp LC(LA(KC_G))	
+				&kp LC(LA(G))	
 
 				&kp LC(LS(END))
 				&kp LS(LC(TAB))			 	// 
