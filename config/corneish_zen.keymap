@@ -965,20 +965,20 @@
 				&kp LG(LA(LC(SPACE)))	
 		
 				&kp LG(LS(UP))				 
-				&kp LC(GRAVE)			
+				&kp LG(LA(L))			
 				&kp PG_UP
-				&kp LC(EQUAL)
+				&kp LG(LA(R))			
 				&kp LC(PAGE_UP)			
 				&kp BACKSPACE					// -
 
 				// ----------------------------------------
 
-				&kp LC(COMMA)				 	// 
+				&kp LG(LA(B))			
 				&kp LG(DOWN)				// @End Sprung
 				&kp LEFT 					// @Left
 				&kp DOWN					// @Down
 				&kp RIGHT 					// @Right
-				&kp LC(DOT)			 	// 
+				&kp LG(LA(G))			
 
 				&kp LG(LS(DOWN))					
 				&kp LS(LC(TAB))				 
@@ -1285,7 +1285,7 @@
 				&kp LG(V)
 				&kp LG(LA(V))	
 				&kp LG(LA(I))	
-				&kp LG(LA(D))	
+				&kp LG(LA(J))	
 				&kp ENTER
 
 				// ----------------------------------------
@@ -1295,12 +1295,12 @@
 				&kp LG(Y)
 				&kp LG(LS(Y))
 				&kp LG(O)
-				&kp LG(D)	
+				&kp LG(LA(D))	
 
 				&kp LG(P)	
 				&kp LG(LA(F))	
-				&kp LG(LA(N))	
-				&kp LG(LA(M))	
+				&kp LG(KP_PLUS)	
+				&kp LG(KP_MINUS)	
 				&kp LG(F)	
 				&kp LG(T)
 				
@@ -1358,7 +1358,7 @@
 				&kp LG(LS(V))
 				&kp LG(LA(LS(V)))	
 				&kp LG(LA(LS(I)))	
-				&kp LG(LA(LS(D)))	
+				&kp LG(LA(LS(J)))	
 				&kp LG(LS(ENTER))	
 
 				// ----------------------------------------
@@ -1368,12 +1368,12 @@
 				&kp LG(LA(LS(Y)))
 				&kp LG(LA(LS(Y)))
 				&kp LG(LS(O))
-				&kp LG(LS(D))	
+				&kp LG(LA(LS(D)))	
 
 				&kp LG(LS(P))	
 				&kp LG(LA(LS(F)))	
-				&kp LG(LA(LS(N)))	
-				&kp LG(LA(LS(M)))	
+				&kp LG(LS(KP_PLUS))
+				&kp LG(LS(KP_MINUS))
 				&kp LG(LS(F))	
 				&kp LS(LG(LS(T)))
 				
@@ -1443,11 +1443,11 @@
 				&kp F14
 				&kp F15
 
-				&kp LC(LS(F1))
-				&kp LC(LS(F2))
-				&kp LC(LS(F3))
-				&kp LC(LS(F4))
-				&kp LC(LS(F5))
+				&kp LC(LS(F6))
+				&kp LC(LS(F7))
+				&kp LC(LS(F8))
+				&kp LC(LS(F9))
+				&kp LC(LS(F10))
 				&none
 
 				// ----------------------------------------
@@ -1674,7 +1674,7 @@
 				// ----------------------------------------
 		
 				&none						//
-				&trans
+				&kp LG(SPACE)
 				&none						// 
 				&none						//
 				&mNavShift						//
