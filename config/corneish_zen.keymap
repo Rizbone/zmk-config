@@ -2155,20 +2155,20 @@
 				&wAltShot
 
 				&kp LC(LS(HOME))
-				&kp LC(GRAVE)			
+				&kp LC(LA(KC_L))			
 				&kp PG_UP
-				&kp LC(EQUAL)		 	 
+				&kp LC(LA(KC_R))		 	 
 				&kp LC(PAGE_UP)
 				&kp BSPC					
 
 				// ----------------------------------------
 
-				&kp LC(COMMA)			 	// 
+				&kp LC(LA(KC_B))	
 				&kp LC(END)					// @End Sprung
 				&kp LEFT 					// @Left
 				&kp DOWN					// @Down
 				&kp RIGHT 					// @Right
-				&kp LC(DOT)				 	// 
+				&kp LC(LA(KC_G))	
 
 				&kp LC(LS(END))
 				&kp LS(LC(TAB))			 	// 
@@ -2476,7 +2476,7 @@
 				&kp LC(V)
 				&kp LC(LA(I))	
 				&kp LC(LA(U))	
-				&kp LC(LA(D))	
+				&kp LC(LA(J))	
 				&kp ENTER
 
 				// ----------------------------------------
@@ -2486,12 +2486,12 @@
 				&kp LC(Y)
 				&kp LC(Z)
 				&kp LC(O)
-				&kp LC(D)	
+				&kp LC(LA(D))	
 
 				&kp LC(P)	
 				&kp LC(LA(F))	
-				&kp LC(LA(N))	
-				&kp LC(LA(M))	
+				&kp LC(KP_PLUS)	
+				&kp LC(KP_MINUS)	
 				&kp LC(F)	
 				&kp LC(T)
 				
@@ -2549,7 +2549,7 @@
 				&kp LC(LS(V))
 				&kp LC(LS(LA(I)))	
 				&kp LC(LS(LA(U)))	
-				&kp LC(LS(LA(D)))
+				&kp LC(LS(LA(J)))
 				&kp LA(ENTER)	
 
 				// ----------------------------------------
@@ -2559,12 +2559,12 @@
 				&kp LC(LS(Y))
 				&kp LC(LS(Z))
 				&kp LC(LS(O))
-				&kp LC(LS(D))	 
+				&kp LC(LA(LS(D)))	 
 
 				&kp LC(LS(P))
 				&kp LC(LS(LA(F)))	
-				&kp LC(LS(LA(N)))	
-				&kp LC(LS(LA(M)))
+				&kp LC(LS(KP_PLUS))	
+				&kp LC(LS(KP_MINUS))
 				&kp LC(LS(F))
 				&kp LC(LS(LS(T)))
 				
@@ -2635,11 +2635,11 @@
 				&kp F14
 				&kp F15
 
-				&kp LC(LS(F1))
-				&kp LC(LS(F2))
-				&kp LC(LS(F3))
-				&kp LC(LS(F4))
-				&kp LC(LS(F5))
+				&kp LC(LS(F6))
+				&kp LC(LS(F7))
+				&kp LC(LS(F8))
+				&kp LC(LS(F9))
+				&kp LC(LS(F10))
 				&none
 
 				// ----------------------------------------
@@ -2865,7 +2865,7 @@
 				// ----------------------------------------
 		
 				&none						//
-				&trans
+				&kp LC(SPC)
 				&none						// 
 				&none						//
 				&wNavShift						//
