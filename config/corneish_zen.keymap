@@ -360,15 +360,6 @@
 				;
     	};
 
-		mCalc: mCalc {
-            label = "mCalc";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to mNRhard>
-            	, <&kp LG(LS(F1))>
-                ;
-    	};
 
 
 
@@ -575,15 +566,6 @@
 				;
     	};
 
-		wCalc: wCalc {
-            label = "wCalc";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to wNRhard>
-            	, <&kp LG(LC(F11))>
-                ;
-    	};
 
 		wAltShot: wAltShot {
             label = "wAltShot";
@@ -1086,7 +1068,7 @@
 				&none
 				&sl mSPRG					// deep						
 				&mNavShift
-				&mCalc
+				&none
 
 				// ----------------------------------------
 
@@ -2275,7 +2257,7 @@
 				&none
 				&sl wSPRG					// deep						
 				&wNavShift
-				&wCalc
+				&none
 
 				// ----------------------------------------
 
