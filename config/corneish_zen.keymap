@@ -17,17 +17,16 @@
 
 #define mPRG 5
 #define mSPRG 6
+#define mPNAV 7
 
-#define mFUNC 7
-#define mSFUNC 8
+#define mFUNC 8
+#define mSFUNC 9
+#define mAlter 10
 
-#define mSYM 9
-#define mSSYM 10
+#define mSYM 11
+#define mSSYM 12
 
-#define mGUI 11
-
-#define mAlter 12
-#define mPNAV 13
+#define mGUI 13
 
 #define mSShift 14
 #define mSSShift 15
@@ -45,17 +44,16 @@
 
 #define wPRG 21
 #define wSPRG 22
+#define wPNAV 23
 
-#define wFUNC 23
-#define wSFUNC 24
+#define wFUNC 24
+#define wSFUNC 25
+#define wAlter 26
 
-#define wSYM 25
-#define wSSYM 26
+#define wSYM 27
+#define wSSYM 28
 
-#define wGUI 27
-
-#define wAlter 28
-#define wPNAV 29
+#define wGUI 29
 
 #define wSShift 30
 #define wSSShift 31
@@ -1170,6 +1168,81 @@
 
 			>;
 		};
+
+
+
+
+
+		// -----------------------------------------------------|
+		// Layer 17 - mPNAV =	Programm NAV					|
+		// -----------------------------------------------------|
+
+		mac_pnav
+		{
+			label = "MAC";
+
+			bindings = <
+
+				// ----------------------------------------
+
+				&kp LG(LA(ENTER))			// 
+				&none						//
+				&kp LS(TAB)						
+				&kp LG(LA(UP))				// 
+				&kp TAB						
+				&none						// 
+
+				&bt BT_CLR
+				&bt BT_SEL 0
+				&bt BT_SEL 1
+				&bt BT_SEL 2
+				&bt BT_SEL 3
+				&kp BACKSPACE				//
+
+				// ----------------------------------------
+		
+				&none						//
+				&kp LG(LA(LS(LEFT)))		 
+				&kp LG(LA(LEFT))			// 
+				&kp LG(LA(DOWN))			// 
+				&kp LG(LA(RIGHT))			// 
+				&kp LG(LA(LS(RIGHT)))			
+
+				&none						//
+				&kp LGUI					//
+				&none						// 
+				&none						//
+				&none						// 
+				&none						//
+
+				// ----------------------------------------
+
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
+				&none						// 
+
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
+				&none						//
+
+				// ----------------------------------------
+		
+				&none						//
+				&none
+				&none						// 
+				&none						//
+				&mNavShift
+				&none						// 
+
+				// ----------------------------------------
+			>;
+		};
 					
 
 
@@ -1316,6 +1389,81 @@
 				// ----------------------------------------       
 			>;
 		};
+
+
+
+		// -----------------------------------------------------|
+		// Layer 16 - mAlter =	Alterantive						|
+		// -----------------------------------------------------|
+
+		mac_mAlter
+		{
+			label = "MAC";
+
+			bindings = <
+
+				// ----------------------------------------
+
+				&none
+				&kp F1
+				&kp F2
+				&kp F3
+				&kp F4
+				&kp F5
+
+				&kp F6
+				&kp F7
+				&kp F8
+				&kp F9
+				&kp F10
+				&none
+
+				// ----------------------------------------
+		
+				&none
+				&kp LG(N1)					// 11
+				&kp LG(N2)					// 12
+				&kp LG(N3)					// 13
+				&kp LG(N4)					// 14
+				&kp LG(N5)					// 15
+
+				&kp LG(N6)					// 16
+				&kp LG(N7)					// 17
+				&kp LG(N8)					// 18
+				&kp LG(N9)					// 19
+				&kp LG(N0)					// 20
+				&none
+
+				// ----------------------------------------
+
+				&none
+				&kp F11
+				&kp F12
+				&kp F13
+				&kp F14
+				&kp F15
+
+				&kp LC(LS(F1))
+				&kp LC(LS(F2))
+				&kp LC(LS(F3))
+				&kp LC(LS(F4))
+				&kp LC(LS(F5))
+				&none
+
+				// ----------------------------------------
+		
+				&none						//
+				&trans
+				&none						// 
+				&none						//
+				&mNavShift						//
+				&none						// 
+
+				// ----------------------------------------
+			>;
+		};
+
+
 
 
 
@@ -1537,154 +1685,6 @@
 		};
 
 
-
-
-		// -----------------------------------------------------|
-		// Layer 16 - mAlter =	Alterantive						|
-		// -----------------------------------------------------|
-
-		mac_mAlter
-		{
-			label = "MAC";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&none
-				&kp F1
-				&kp F2
-				&kp F3
-				&kp F4
-				&kp F5
-
-				&kp F6
-				&kp F7
-				&kp F8
-				&kp F9
-				&kp F10
-				&none
-
-				// ----------------------------------------
-		
-				&none
-				&kp LG(N1)					// 11
-				&kp LG(N2)					// 12
-				&kp LG(N3)					// 13
-				&kp LG(N4)					// 14
-				&kp LG(N5)					// 15
-
-				&kp LG(N6)					// 16
-				&kp LG(N7)					// 17
-				&kp LG(N8)					// 18
-				&kp LG(N9)					// 19
-				&kp LG(N0)					// 20
-				&none
-
-				// ----------------------------------------
-
-				&none
-				&kp F11
-				&kp F12
-				&kp F13
-				&kp F14
-				&kp F15
-
-				&kp LC(LS(F1))
-				&kp LC(LS(F2))
-				&kp LC(LS(F3))
-				&kp LC(LS(F4))
-				&kp LC(LS(F5))
-				&none
-
-				// ----------------------------------------
-		
-				&none						//
-				&trans
-				&none						// 
-				&none						//
-				&mNavShift						//
-				&none						// 
-
-				// ----------------------------------------
-			>;
-		};
-
-
-
-
-
-
-		// -----------------------------------------------------|
-		// Layer 17 - mPNAV =	Programm NAV					|
-		// -----------------------------------------------------|
-
-		mac_pnav
-		{
-			label = "MAC";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&kp LG(LA(ENTER))			// 
-				&none						//
-				&kp LS(TAB)						
-				&kp LG(LA(UP))				// 
-				&kp TAB						
-				&none						// 
-
-				&bt BT_CLR
-				&bt BT_SEL 0
-				&bt BT_SEL 1
-				&bt BT_SEL 2
-				&bt BT_SEL 3
-				&kp BACKSPACE				//
-
-				// ----------------------------------------
-		
-				&none						//
-				&kp LG(LA(LS(LEFT)))		 
-				&kp LG(LA(LEFT))			// 
-				&kp LG(LA(DOWN))			// 
-				&kp LG(LA(RIGHT))			// 
-				&kp LG(LA(LS(RIGHT)))			
-
-				&none						//
-				&kp LGUI					//
-				&none						// 
-				&none						//
-				&none						// 
-				&none						//
-
-				// ----------------------------------------
-
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
-				&none						// 
-
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
-				&none						//
-
-				// ----------------------------------------
-		
-				&none						//
-				&none
-				&none						// 
-				&none						//
-				&mNavShift
-				&none						// 
-
-				// ----------------------------------------
-			>;
-		};
 
 
 
@@ -2357,6 +2357,83 @@
 
 			>;
 		};
+
+
+
+
+
+
+		// -----------------------------------------------------|
+		// Layer 17 - mPNAV =	Programm NAV					|
+		// -----------------------------------------------------|
+
+		win_pnav
+		{
+			label = "win";
+
+			bindings = <
+
+				// ----------------------------------------
+
+				&kp LC(LA(ENTER))			//
+				&none						//
+				&kp LS(TAB)
+				&kp LC(LA(UP))				// 
+				&kp TAB
+				&none						// 
+
+				&bt BT_CLR
+				&bt BT_SEL 0
+				&bt BT_SEL 1
+				&bt BT_SEL 2
+				&bt BT_SEL 3
+				&kp BACKSPACE				//
+
+				// ----------------------------------------
+		
+				&none						//
+				&none						//
+				&kp LC(LA(LEFT))			// 
+				&kp LC(LA(DOWN))			// 
+				&kp LC(LA(RIGHT))			// 
+				&none						//
+
+				&none						//
+				&kp LALT					//
+				&none						// 
+				&none						//
+				&none						// 
+				&none						//
+
+				// ----------------------------------------
+
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
+				&none						// 
+
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
+				&none						//
+
+				// ----------------------------------------
+		
+				&none						//
+				&none
+				&none						// 
+				&none						//
+				&wNavShift
+				&none						// 
+
+				// ----------------------------------------
+			>;
+		};
+
 					
 
 
@@ -2503,6 +2580,81 @@
 				// ----------------------------------------       
 			>;
 		};
+
+
+
+
+		// -----------------------------------------------------|
+		// Layer 16 - mAlter =	Alterantive						|
+		// -----------------------------------------------------|
+
+		win_mAlter
+		{
+			label = "win";
+
+			bindings = <
+
+				// ----------------------------------------
+
+				&none
+				&kp F1
+				&kp F2
+				&kp F3
+				&kp F4
+				&kp F5
+
+				&kp F6
+				&kp F7
+				&kp F8
+				&kp F9
+				&kp F10
+				&none
+
+				// ----------------------------------------
+		
+				&none
+				&kp LC(N1)					// 11
+				&kp LC(N2)					// 12
+				&kp LC(N3)					// 13
+				&kp LC(N4)					// 14
+				&kp LC(N5)					// 15
+
+				&kp LC(N6)					// 16
+				&kp LC(N7)					// 17
+				&kp LC(N8)					// 18
+				&kp LC(N9)					// 19
+				&kp LC(N0)					// 20
+				&none
+
+				// ----------------------------------------
+
+				&none
+				&kp F11
+				&kp F12
+				&kp F13
+				&kp F14
+				&kp F15
+
+				&kp LC(LS(F1))
+				&kp LC(LS(F2))
+				&kp LC(LS(F3))
+				&kp LC(LS(F4))
+				&kp LC(LS(F5))
+				&none
+
+				// ----------------------------------------
+		
+				&none						//
+				&trans
+				&none						// 
+				&none						//
+				&wNavShift						//
+				&none						// 
+
+				// ----------------------------------------
+			>;
+		};
+
 
 
 
@@ -2725,152 +2877,7 @@
 
 
 
-		// -----------------------------------------------------|
-		// Layer 16 - mAlter =	Alterantive						|
-		// -----------------------------------------------------|
 
-		win_mAlter
-		{
-			label = "win";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&none
-				&kp F1
-				&kp F2
-				&kp F3
-				&kp F4
-				&kp F5
-
-				&kp F6
-				&kp F7
-				&kp F8
-				&kp F9
-				&kp F10
-				&none
-
-				// ----------------------------------------
-		
-				&none
-				&kp LC(N1)					// 11
-				&kp LC(N2)					// 12
-				&kp LC(N3)					// 13
-				&kp LC(N4)					// 14
-				&kp LC(N5)					// 15
-
-				&kp LC(N6)					// 16
-				&kp LC(N7)					// 17
-				&kp LC(N8)					// 18
-				&kp LC(N9)					// 19
-				&kp LC(N0)					// 20
-				&none
-
-				// ----------------------------------------
-
-				&none
-				&kp F11
-				&kp F12
-				&kp F13
-				&kp F14
-				&kp F15
-
-				&kp LC(LS(F1))
-				&kp LC(LS(F2))
-				&kp LC(LS(F3))
-				&kp LC(LS(F4))
-				&kp LC(LS(F5))
-				&none
-
-				// ----------------------------------------
-		
-				&none						//
-				&trans
-				&none						// 
-				&none						//
-				&wNavShift						//
-				&none						// 
-
-				// ----------------------------------------
-			>;
-		};
-
-
-
-
-
-
-		// -----------------------------------------------------|
-		// Layer 17 - mPNAV =	Programm NAV					|
-		// -----------------------------------------------------|
-
-		win_pnav
-		{
-			label = "win";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&kp LC(LA(ENTER))			//
-				&none						//
-				&kp LS(TAB)
-				&kp LC(LA(UP))				// 
-				&kp TAB
-				&none						// 
-
-				&bt BT_CLR
-				&bt BT_SEL 0
-				&bt BT_SEL 1
-				&bt BT_SEL 2
-				&bt BT_SEL 3
-				&kp BACKSPACE				//
-
-				// ----------------------------------------
-		
-				&none						//
-				&none						//
-				&kp LC(LA(LEFT))			// 
-				&kp LC(LA(DOWN))			// 
-				&kp LC(LA(RIGHT))			// 
-				&none						//
-
-				&none						//
-				&kp LALT					//
-				&none						// 
-				&none						//
-				&none						// 
-				&none						//
-
-				// ----------------------------------------
-
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
-				&none						// 
-
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
-				&none						//
-
-				// ----------------------------------------
-		
-				&none						//
-				&none
-				&none						// 
-				&none						//
-				&wNavShift
-				&none						// 
-
-				// ----------------------------------------
-			>;
-		};
 
 
 
