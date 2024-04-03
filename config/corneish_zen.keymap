@@ -1167,7 +1167,7 @@
 
 				// ----------------------------------------
 
-				&kp LC(LA(ENTER))			// 
+				&kp LG(LA(ENTER))			// 
 				&none						//
 				&kp LS(TAB)						
 				&kp LG(LA(UP))				// 
