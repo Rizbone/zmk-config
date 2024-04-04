@@ -1265,8 +1265,8 @@
 
 				&kp LG(LA(V))
 				&kp LG(V)
-				&kp LG(LA(V))	
 				&kp LG(LA(I))	
+				&kp LG(LA(U))	
 				&kp LG(LA(J))	
 				&kp ENTER
 
@@ -1338,8 +1338,8 @@
 
 				&kp LG(LA(LS(V)))
 				&kp LG(LS(V))
-				&kp LG(LA(LS(V)))	
 				&kp LG(LA(LS(I)))	
+				&kp LG(LA(LS(U)))	
 				&kp LG(LA(LS(J)))	
 				&kp LG(LS(ENTER))	
 
