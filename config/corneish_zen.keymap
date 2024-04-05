@@ -108,7 +108,7 @@
             label = "TAP_DANCE_mdNav";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&sl mNAV>, <&mNavReset>;
+            bindings = <&sl mNAV>, <&mNavResetReset>;
         };
 
 
@@ -143,7 +143,7 @@
             label = "TAP_DANCE_mdNavWin";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&sl wNAV>, <&wNavReset>;
+            bindings = <&sl wNAV>, <&wNavResetReset>;
         };
 
     };
@@ -740,7 +740,7 @@
 				&kp SPACE
 				&sl mFUNC
 				&sl mPRG
-				&sl mNAV
+				&mdNav
 				&mdNr
 
 				// ----------------------------------------
@@ -813,7 +813,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&mNavReset
+				&mdNavWin
 				&none
 			>;		
 		};
@@ -884,7 +884,7 @@
 				&kp SPACE
 				&sl mFUNC
 				&sl mPRG
-				&sl mNAV
+				&mdNavWin
 				&mdNr
 			>;		
 		};
@@ -955,7 +955,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&mNavReset
+				&mdNavWin
 				&mdNr
 
 				// ----------------------------------------
@@ -1030,7 +1030,7 @@
 				&kp SPACE				
 				&sl mFUNC
 				&sl mPRG
-				&mReset
+				&mdNavWin
 				&mdNr
 
 				// ----------------------------------------							
