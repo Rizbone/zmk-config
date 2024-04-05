@@ -770,7 +770,7 @@
 
 				// ----------------------------------------
 		
-				&mSymReset
+				&sl mSYM
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
@@ -2030,7 +2030,7 @@
 
 				// ----------------------------------------
 
-				&wSymReset
+				&sl wSYM
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
