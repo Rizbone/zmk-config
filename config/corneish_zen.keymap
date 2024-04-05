@@ -38,8 +38,8 @@
 
 #define wCHAR 16
 #define wNR 17
-#define wLCHAR 18
-#define wNRhard 19
+#define wNRhard 18
+#define wLCHAR 19
 
 #define wNAV 20
 
@@ -892,12 +892,12 @@
 				&kp LS(N)
 				&kp LS(R)
 				&kp LS(S)
-				&kp LS(G)
+				&kp LS(G) 
 				&mEnterReset
 
 				// ----------------------------------------
 
-				&mShiftReset
+				&mdLs
 				&kp LS(F)
 				&kp LS(V)
 				&kp LS(MINUS)
@@ -909,7 +909,7 @@
 				&kp LS(LBKT)
 				&kp LS(SQT)
 				&kp LS(K)
-				&mShiftReset						
+				&mdRs
 
 				// ----------------------------------------
 
@@ -1972,80 +1972,7 @@
 
 
 		// -----------------------------------------------------|
-		// Layer 2 - mLCHAR = 	  Buchstaben Lock				|
-		// -----------------------------------------------------|
-	
-		win_lchar
-		{
-			label = "win";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&kp ESC
-				&kp LS(J) 
-				&kp LS(D)	 
-				&kp LS(U)
-				&kp LS(A)
-				&kp LS(X)
-
-				&kp LS(P)
-				&kp LS(H)
-				&kp LS(L)
-				&kp LS(M)
-				&kp LS(W)
-				&kp LS(BSPC)
-
-				// ----------------------------------------
-	
-				&sl wSShift
-				&kp LS(C)
-				&kp LS(T)
-				&kp LS(I)
-				&kp LS(E)
-				&kp LS(O)
-			
-				&kp LS(B)
-				&kp LS(N)
-				&kp LS(R)
-				&kp LS(S)
-				&kp LS(G)
-				&wEnterReset
-
-				// ----------------------------------------
-
-				&wShiftReset
-				&kp LS(F)
-				&kp LS(V)
-				&kp LS(MINUS)
-				&kp LS(Y)
-				&kp LS(Q)
-
-				&kp LS(Z)
-				&kp LS(SEMI)
-				&kp LS(LBKT)
-				&kp LS(SQT)
-				&kp LS(K)
-				&wShiftReset						
-
-				// ----------------------------------------
-
-				&sl wSYM
-				&wSpaceReset 
-				&wFuncReset
-				&wPrgReset
-				&wNavReset
-				&mdNrWin
-
-				// ----------------------------------------
-			>;
-		};
-
-
-
-		// -----------------------------------------------------|
-		// Layer 3 - mNRhard = 	  Zahlen Hard Lock				|
+		// Layer  - mNRhard = 	  Zahlen Hard Lock				|
 		// -----------------------------------------------------|
 
 		win_zahlenhard
@@ -2088,7 +2015,7 @@
 
 				// ----------------------------------------
 
-				&wShiftReset
+				&mdLsWin
 				&kp LS(N7)				// /
 				&kp LC(LA(MINUS))		// backlslash
 				&kp LS(N5)				// %
@@ -2100,7 +2027,7 @@
 				&kp COMMA				// ,
 				&kp LS(SLASH)			// _
 				&kp SLASH 				// -
-				&wShiftReset
+				&mdRsWin
 
 				// ----------------------------------------
 		
@@ -2113,6 +2040,79 @@
 			>;		
 		};
 
+
+
+
+		// -----------------------------------------------------|
+		// Layer  - mLCHAR = 	  Buchstaben Lock				|
+		// -----------------------------------------------------|
+	
+		win_lchar
+		{
+			label = "win";
+
+			bindings = <
+
+				// ----------------------------------------
+
+				&kp ESC
+				&kp LS(J) 
+				&kp LS(D)	 
+				&kp LS(U)
+				&kp LS(A)
+				&kp LS(X)
+
+				&kp LS(P)
+				&kp LS(H)
+				&kp LS(L)
+				&kp LS(M)
+				&kp LS(W)
+				&kp LS(BSPC)
+
+				// ----------------------------------------
+	
+				&sl wSShift
+				&kp LS(C)
+				&kp LS(T)
+				&kp LS(I)
+				&kp LS(E)
+				&kp LS(O)
+			
+				&kp LS(B)
+				&kp LS(N)
+				&kp LS(R)
+				&kp LS(S)
+				&kp LS(G)
+				&wEnterReset
+
+				// ----------------------------------------
+
+				&mdLsWin
+				&kp LS(F)
+				&kp LS(V)
+				&kp LS(MINUS)
+				&kp LS(Y)
+				&kp LS(Q)
+
+				&kp LS(Z)
+				&kp LS(SEMI)
+				&kp LS(LBKT)
+				&kp LS(SQT)
+				&kp LS(K)
+				&mdRsWin					
+
+				// ----------------------------------------
+
+				&sl wSYM
+				&wSpaceReset 
+				&wFuncReset
+				&wPrgReset
+				&wNavReset
+				&mdNrWin
+
+				// ----------------------------------------
+			>;
+		};
 
 
 
