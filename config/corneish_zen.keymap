@@ -638,25 +638,6 @@
                 ; 
     	};
 
-		mReset: mReset {
-            label = "mReset";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-				= <&to mCHAR>
-				, <&kp LC(LG(LA(NUBS)))>
-				, <&macro_release &kp LALT>
-				, <&macro_release &kp RALT>
-				, <&macro_release &kp LCTL>
-				, <&macro_release &kp RCTL>
-				, <&macro_release &kp LSFT>
-				, <&macro_release &kp RSFT>
-				, <&macro_release &kp LGUI>
-				, <&macro_release &kp RGUI>
-                ; 
-    	};
-
-
 
 
 	};
@@ -1929,7 +1910,7 @@
 				&kp SPACE
 				&sl wFUNC
 				&sl wPRG
-				&sl wNAV
+				&mdNavWin
 				&mdNrWin
 
 				// ----------------------------------------
@@ -2002,7 +1983,7 @@
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&wNavReset
+				&mdNavWin
 				&none
 			>;		
 		};
@@ -2145,7 +2126,7 @@
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&wNavReset
+				&mdNavWin
 				&mdNrWin
 
 				// ----------------------------------------
@@ -2219,7 +2200,7 @@
 				&kp SPACE				
 				&sl wFUNC
 				&sl wPRG
-				&wReset
+				&mdNavWin 
 				&mdNrWin
 
 				// ----------------------------------------							
@@ -2294,7 +2275,7 @@
 				&none
 				&none
 				&sl wSPRG					// deep						
-				&wNavShift
+				&mdNavWin 
 				&none
 
 				// ----------------------------------------
@@ -2370,7 +2351,7 @@
 				&none						//
 				&none
 				&trans						// 
-				&wNavShift
+				&mdNavWin 
 				&none						// 
 
 				// ----------------------------------------
@@ -2447,7 +2428,7 @@
 				&none
 				&none						// 
 				&none						//
-				&wNavShift
+				&mdNavWin 
 				&none						// 
 
 				// ----------------------------------------
@@ -2521,7 +2502,7 @@
 				&sl wGUI					//
 				&sl wSFUNC					// deep
 				&none
-				&wNavShift					//
+				&mdNavWin 
 				&none						//
 
 				// ----------------------------------------
@@ -2594,7 +2575,7 @@
 				&wModSCtlReset
 				&trans						// 
 				&none
-				&wNavShift						//
+				&mdNavWin 
 				&none						//
 
 				// ----------------------------------------       
@@ -2668,7 +2649,7 @@
 				&trans
 				&none						// 
 				&none						//
-				&wNavShift						//
+				&mdNavWin 
 				&none						// 
 
 				// ----------------------------------------
@@ -2742,7 +2723,7 @@
 				&none
 				&none					// 
 				&none					//
-				&wNavShift					//
+				&mdNavWin 
 				&none					//
 
 				// ----------------------------------------
@@ -2814,7 +2795,7 @@
 				&none
 				&none					// 
 				&none					//
-				&wNavShift				// 
+				&mdNavWin 
 				&none					//
 
 				// ----------------------------------------
@@ -2888,7 +2869,7 @@
 				&kp LC(SPC)
 				&none						// 
 				&none						//
-				&wNavShift						//
+				&mdNavWin 
 				&none						// 
 
 				// ----------------------------------------
@@ -2914,7 +2895,7 @@
 
 				// ----------------------------------------
 
-				&kp ESC						// 
+				&wReset
 				&none
 				&none
 				&kp C_VOL_UP
@@ -2986,7 +2967,7 @@
 
 				// ----------------------------------------
 
-				&kp ESC						// 
+				&wReset
 				&none
 				&none
 				&kp C_VOL_UP
