@@ -103,6 +103,14 @@
             bindings = <&sl mLCHAR>, <&to mLCHAR>;
         };
 
+		mdNav: tap_dance_mdNav {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_mdNav";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&sl mNAV>, <&to mCHAR>;
+        };
+
 
 
 		// ------------------------- WiN ---------------------
@@ -128,6 +136,14 @@
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
             bindings = <&sl wLCHAR>, <&to wLCHAR>;
+        };
+
+		mdNavWin: tap_dance_mdNavWin {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_mdNavWin";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&sl wNAV>, <&to wCHAR>;
         };
 
     };
