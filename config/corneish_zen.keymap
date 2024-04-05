@@ -213,9 +213,9 @@
             #binding-cells = <0>;
             bindings
                 = <&to mCHAR>
-                , <&macro_press &mo mNAV>
+                , <&macro_press &sl mNAV>
     			, <&macro_pause_for_release>
-				, <&macro_release &mo mNAV>
+				, <&macro_release &sl mNAV>
                 ;
     	};
 		mPrgReset: mPrgReset {
@@ -430,9 +430,9 @@
             #binding-cells = <0>;
             bindings
                 = <&to wCHAR>
-                , <&macro_press &mo wNAV>
+                , <&macro_press &sl wNAV>
     			, <&macro_pause_for_release>
-				, <&macro_release &mo wNAV>
+				, <&macro_release &sl wNAV>
                 ;
     	};
 		wPrgReset: wPrgReset {
