@@ -151,7 +151,7 @@
             label = "TAP_DANCE_mdNavWin";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&sl wNAV>, <&wNavReset>;
+            bindings = <&sl wNAV>, <&to wCHAR>;
         };
 
     };
