@@ -117,7 +117,7 @@
             label = "TAP_DANCE_mdNav";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&mNavRes>, <&mo_tog mNav mChar>;
+            bindings = <&mNavRes>, <&mo_tog mNav mCHAR>;
         };
 
 
