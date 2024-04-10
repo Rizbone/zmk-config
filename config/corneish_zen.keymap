@@ -79,7 +79,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&to>;
+            bindings = <&mo>, <&to>;
         };
 
 	
@@ -116,7 +116,7 @@
             label = "TAP_DANCE_mdNav";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&sl mNAV>, <&mo_tog &mNavReset mCHAR>;
+            bindings = <&sl mNAV>, <&to mCHAR>;
         };
 
 
