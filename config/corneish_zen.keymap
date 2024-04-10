@@ -108,7 +108,7 @@
             label = "TAP_DANCE_mdNav";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&sl mNAV>, <&mNavReset>;
+            bindings = <&mNavRes>, <&mNavReset>;
         };
 
 
@@ -376,6 +376,44 @@
 				, <&macro_release &sl mSSShift>
 				;
     	};
+
+
+
+
+
+
+
+
+
+
+		mNavRes: mNavRes {
+            label = "mNavRes";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+				= <&macro_release &kp LALT>
+				, <&macro_release &kp RALT>
+				, <&macro_release &kp LCTL>
+				, <&macro_release &kp RCTL>
+				, <&macro_release &kp LSFT>
+				, <&macro_release &kp RSFT>
+				, <&macro_release &kp LGUI>
+				, <&macro_release &kp RGUI>
+                , <&macro_press &sl mNAV>
+    			, <&macro_pause_for_release>
+				, <&macro_release &sl mNAV>
+				;
+    	};
+
+
+
+
+
+
+
+
+
+
 
 
 
