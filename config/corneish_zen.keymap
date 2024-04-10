@@ -74,6 +74,15 @@
 
     behaviors {
 
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
+    
+
 	
 
 		// ------------------------- MAC ---------------------
@@ -108,7 +117,7 @@
             label = "TAP_DANCE_mdNav";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&mNavRes>, <&mNavReset>;
+            bindings = <&mNavRes>, <&mo_tog mNav mChar>;
         };
 
 
