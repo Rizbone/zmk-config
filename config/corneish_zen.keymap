@@ -1827,7 +1827,7 @@
 				&kp SPACE
 				&sl wFUNC
 				&sl wPRG
-				&sl wNav
+				&sl wNAV
 				&mdNrWin
 
 				// ----------------------------------------
@@ -1900,7 +1900,7 @@
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&sl wNav
+				&sl wNAV
 				&none
 			>;		
 		};
