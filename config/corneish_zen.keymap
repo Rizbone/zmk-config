@@ -1268,7 +1268,7 @@
 				&kp LG(C)			
 				&kp LG(X)
 
-				&kp LC(LA(V))
+				&kp LC(LA(H))
 				&kp LG(V)
 				&kp LC(LA(I))	
 				&kp LC(LA(U))	
@@ -1341,7 +1341,7 @@
 				&kp LG(LS(C))			
 				&kp LG(LS(X))
 
-				&kp LG(LA(LS(V)))
+				&kp LC(LA(LS(H)))	
 				&kp LG(LS(V))
 				&kp LC(LA(LS(I)))	
 				&kp LC(LA(LS(U)))	
@@ -2460,7 +2460,7 @@
 				&kp LC(C)			
 				&kp LC(X)
 
-				&kp LG(V)
+				&kp LC(LA(H))	
 				&kp LC(V)
 				&kp LC(LA(I))	
 				&kp LC(LA(U))	
@@ -2533,7 +2533,7 @@
 				&kp LC(LS(C))			
 				&kp LC(LS(X))
 
-				&kp LG(LS(V))
+				&kp LC(LS(LA(H)))	
 				&kp LC(LS(V))
 				&kp LC(LS(LA(I)))	
 				&kp LC(LS(LA(U)))	
