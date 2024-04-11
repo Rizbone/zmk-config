@@ -74,6 +74,9 @@
 
     behaviors {
 
+
+
+
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -778,7 +781,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&mdNav
+				&sl mNAV
 				&none
 			>;		
 		};
@@ -849,7 +852,7 @@
 				&kp SPACE
 				&sl mFUNC
 				&sl mPRG
-				&mdNav
+				&sl mNAV
 				&mdNr
 			>;		
 		};
@@ -920,7 +923,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&mdNav
+				&sl mNAV
 				&mdNr
 
 				// ----------------------------------------
@@ -995,13 +998,12 @@
 				&kp SPACE				
 				&sl mFUNC
 				&sl mPRG
-				&mdNav
+				&mNavReset
 				&mdNr
 
 				// ----------------------------------------							
 			>;
 		};
-
 
 
 
