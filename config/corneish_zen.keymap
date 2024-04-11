@@ -708,7 +708,7 @@
 				&kp SPACE
 				&sl mFUNC
 				&sl mPRG
-				&mdNav
+				&sl mNAV
 				&mdNr
 
 				// ----------------------------------------
