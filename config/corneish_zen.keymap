@@ -998,7 +998,7 @@
 				&kp SPACE				
 				&sl mFUNC
 				&sl mPRG
-				&mNavReset
+				&mNavShift	
 				&mdNr
 
 				// ----------------------------------------							
