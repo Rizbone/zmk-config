@@ -74,22 +74,6 @@
 
     behaviors {
 
-
-
-		mNavResIt: mNavResIt {
-            label = "mNavResIt";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to mCHAR>
-                , <&kp &mo mNAV>;
-                ;
-    	};
-
-
-
-
-
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -794,7 +778,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&sl mNAV
+				&mdNav
 				&none
 			>;		
 		};
@@ -865,7 +849,7 @@
 				&kp SPACE
 				&sl mFUNC
 				&sl mPRG
-				&sl mNAV
+				&mdNav
 				&mdNr
 			>;		
 		};
@@ -936,7 +920,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&sl mNAV
+				&mdNav
 				&mdNr
 
 				// ----------------------------------------
@@ -1011,7 +995,7 @@
 				&kp SPACE				
 				&sl mFUNC
 				&sl mPRG
-				&mNavResIt
+				&mdNav
 				&mdNr
 
 				// ----------------------------------------							
