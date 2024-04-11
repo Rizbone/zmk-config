@@ -114,14 +114,6 @@
             bindings = <&sl mLCHAR>, <&to mLCHAR>;
         };
 
-		mdNav: tap_dance_mdNav {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_mdNav";
-            #binding-cells = <0>;
-            tapping-term-ms = <1000>;
-            bindings = <&sl mNAV>, <&to mCHAR>;
-        };
-
 
 
 		// ------------------------- WiN ---------------------
@@ -149,13 +141,6 @@
             bindings = <&sl wLCHAR>, <&to wLCHAR>;
         };
 
-		mdNavWin: tap_dance_mdNavWin {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_mdNavWin";
-            #binding-cells = <0>;
-            tapping-term-ms = <1000>;
-            bindings = <&sl wNAV>, <&to wCHAR>;
-        };
 
     };
 
@@ -207,17 +192,7 @@
                 , <&kp ENTER>
                 ;
     	};
-		mNavReset: mNavReset {
-            label = "mNavReset";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to mCHAR>
-                , <&macro_press &sl mNAV>
-    			, <&macro_pause_for_release>
-				, <&macro_release &sl mNAV>
-                ;
-    	};
+
 		mPrgReset: mPrgReset {
             label = "mPrgReset";
             compatible = "zmk,behavior-macro";
@@ -240,18 +215,7 @@
 				, <&macro_release &sl mFUNC>
                 ;
     	};
-		mSymReset: mSymReset {
-            label = "mSymReset";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to mCHAR>
-                , <&macro_press &sl mSYM>
-    			, <&macro_pause_for_release>
-				, <&macro_release &sl mSYM>
-                ;
-    	};
-
+	
 		mShiftReset: mShiftReset {
             label = "mShiftReset";
             compatible = "zmk,behavior-macro";
@@ -389,8 +353,6 @@
     	};
 
 
-
-
 		// ------------------------- WiN ---------------------
 
         wSpaceReset: wSpaceReset {
@@ -409,17 +371,6 @@
             bindings
                 = <&to wCHAR>
                 , <&kp ENTER>
-                ;
-    	};
-		wNavReset: wNavReset {
-            label = "wNavReset";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to wCHAR>
-                , <&macro_press &sl wNAV>
-    			, <&macro_pause_for_release>
-				, <&macro_release &sl wNAV>
                 ;
     	};
 		wPrgReset: wPrgReset {
@@ -444,18 +395,6 @@
 				, <&macro_release &sl wFUNC>
                 ;
     	};
-		wSymReset: wSymReset {
-            label = "wSymReset";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to wCHAR>
-                , <&macro_press &sl wSYM>
-    			, <&macro_pause_for_release>
-				, <&macro_release &sl wSYM>
-                ;
-    	};
-
 		wShiftReset: wShiftReset {
             label = "wShiftReset";
             compatible = "zmk,behavior-macro";
@@ -613,15 +552,6 @@
             bindings
 				= <&to wCHAR>
 				, <&kp LC(LG(LA(NUBS)))>
-				, <&macro_release &kp LALT>
-				, <&macro_release &kp RALT>
-				, <&macro_release &kp LCTL>
-				, <&macro_release &kp RCTL>
-				, <&macro_release &kp LSFT>
-				, <&macro_release &kp RSFT>
-				, <&macro_release &kp LGUI>
-				, <&macro_release &kp RGUI>
-
                 ; 
     	};
 
@@ -919,11 +849,11 @@
 
 				// ----------------------------------------
 
-				&mSymReset
+				&sl mSYM
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&sl mNAV
+				&mNavShift
 				&mdNr
 
 				// ----------------------------------------
@@ -1073,7 +1003,7 @@
 				&none
 				&none
 				&sl mSPRG					// deep						
-				&mdNav
+				&sl mNAV
 				&none
 
 				// ----------------------------------------
@@ -1148,7 +1078,7 @@
 				&none						//
 				&none
 				&trans						// 
-				&mdNav
+				&sl mNAV
 				&none						// 
 
 				// ----------------------------------------
@@ -1224,7 +1154,7 @@
 				&none
 				&none						// 
 				&none						//
-				&mdNav
+				&sl mNAV
 				&none						// 
 
 				// ----------------------------------------
@@ -1297,7 +1227,7 @@
 				&sl mGUI					//
 				&sl mSFUNC					// deep
 				&none
-				&mdNav
+				&sl mNAV
 				&none						//
 
 				// ----------------------------------------
@@ -1370,7 +1300,7 @@
 				&mModSGuiReset
 				&trans						// 
 				&none
-				&mdNav
+				&sl mNAV
 				&none						//
 
 				// ----------------------------------------       
@@ -1443,7 +1373,7 @@
 				&trans
 				&none						// 
 				&none						//
-				&mdNav
+				&sl mNAV
 				&none						// 
 
 				// ----------------------------------------
@@ -1518,7 +1448,7 @@
 				&none		 			//
 				&none					// 
 				&none					//
-				&mdNav
+				&sl mNAV
 				&none					//
 
 				// ----------------------------------------
@@ -1590,7 +1520,7 @@
 				&none
 				&none					// 
 				&none					//
-				&mdNav
+				&sl mNAV
 				&none					//
 
 				// ----------------------------------------
@@ -1664,7 +1594,7 @@
 				&kp LG(SPACE)
 				&none						// 
 				&none						//
-				&mdNav
+				&sl mNAV
 				&none						// 
 
 				// ----------------------------------------
@@ -1897,7 +1827,7 @@
 				&kp SPACE
 				&sl wFUNC
 				&sl wPRG
-				&mdNavWin
+				&sl wNav
 				&mdNrWin
 
 				// ----------------------------------------
@@ -1966,11 +1896,11 @@
 
 				// ----------------------------------------
 		
-				&wSymReset
+				&sl wSYM
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&mdNavWin
+				&sl wNav
 				&none
 			>;		
 		};
@@ -2113,14 +2043,14 @@
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&mdNavWin
+				&wNavShift
 				&mdNrWin
 
 				// ----------------------------------------		
 			>;
 		};
 
-		
+
 
 
 		// -----------------------------------------------------|
@@ -2187,7 +2117,7 @@
 				&kp SPACE				
 				&sl wFUNC
 				&sl wPRG
-				&mdNavWin 
+				&wNavShift
 				&mdNrWin
 
 				// ----------------------------------------							
@@ -2262,7 +2192,7 @@
 				&none
 				&none
 				&sl wSPRG					// deep						
-				&mdNavWin 
+				&sl wNav 
 				&none
 
 				// ----------------------------------------
@@ -2338,7 +2268,7 @@
 				&none						//
 				&none
 				&trans						// 
-				&mdNavWin 
+				&sl wNav 
 				&none						// 
 
 				// ----------------------------------------
@@ -2415,7 +2345,7 @@
 				&none
 				&none						// 
 				&none						//
-				&mdNavWin 
+				&sl wNav 
 				&none						// 
 
 				// ----------------------------------------
@@ -2489,7 +2419,7 @@
 				&sl wGUI					//
 				&sl wSFUNC					// deep
 				&none
-				&mdNavWin 
+				&sl wNav 
 				&none						//
 
 				// ----------------------------------------
@@ -2562,7 +2492,7 @@
 				&wModSCtlReset
 				&trans						// 
 				&none
-				&mdNavWin 
+				&sl wNav 
 				&none						//
 
 				// ----------------------------------------       
@@ -2636,7 +2566,7 @@
 				&trans
 				&none						// 
 				&none						//
-				&mdNavWin 
+				&sl wNav 
 				&none						// 
 
 				// ----------------------------------------
@@ -2710,7 +2640,7 @@
 				&none
 				&none					// 
 				&none					//
-				&mdNavWin 
+				&sl wNav 
 				&none					//
 
 				// ----------------------------------------
@@ -2782,7 +2712,7 @@
 				&none
 				&none					// 
 				&none					//
-				&mdNavWin 
+				&sl wNav 
 				&none					//
 
 				// ----------------------------------------
@@ -2856,7 +2786,7 @@
 				&kp LC(SPC)
 				&none						// 
 				&none						//
-				&mdNavWin 
+				&sl wNav 
 				&none						// 
 
 				// ----------------------------------------
