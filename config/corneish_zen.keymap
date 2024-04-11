@@ -82,7 +82,7 @@
             #binding-cells = <0>;
             bindings
                 = <&to mCHAR>
-                , <&macro_press &mo mNAV>
+                , <&kp &mo mNAV>;
                 ;
     	};
 
