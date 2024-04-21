@@ -74,17 +74,6 @@
 
     behaviors {
 
-
-
-
-        mo_tog: behavior_mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&to>;
-        };
-
 	
 
 		// ------------------------- MAC ---------------------
@@ -543,6 +532,59 @@
     	};
 
 
+		// Window
+
+		wWinLeft: wWinLeft {
+            label = "wWinLeft";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+				, <&macro_tap &kp LEFT>
+				, <&macro_wait_time 250>
+				, <&macro_release  &kp LGUI>
+                ; 
+    	};
+
+		wWinRight: wWinRight {
+            label = "wWinRight";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+				, <&macro_tap &kp RIGHT>
+				, <&macro_wait_time 250>
+				, <&macro_release  &kp LGUI>
+                ; 
+    	};
+
+		wWinUp: wWinUp {
+            label = "wWinUp";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+				, <&macro_tap &kp UP>
+				, <&macro_wait_time 250>
+				, <&macro_release  &kp LGUI>
+                ; 
+    	};
+
+		wWinDown: wWinDown {
+            label = "wWinDown";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+				, <&macro_tap &kp DOWN>
+				, <&macro_wait_time 250>
+				, <&macro_release  &kp LGUI>
+                ; 
+    	};
+	
+
+
+
 		// Reset
 
 		wReset: wReset {
@@ -552,6 +594,10 @@
             bindings
 				= <&to wCHAR>
 				, <&kp LC(LG(LA(NUBS)))>
+				, <&macro_release  &kp LGUI>
+				, <&macro_release  &kp LCTRL>
+				, <&macro_release  &kp LSHFT>
+				, <&macro_release  &kp LALT>
                 ; 
     	};
 
@@ -887,7 +933,7 @@
 				&kp LC(LA(L))			
 				&kp PG_UP
 				&kp LC(LA(R))			
-				&kp LC(PAGE_UP)			
+				&kp LC(UP)			
 				&kp BACKSPACE					// -
 
 				// ----------------------------------------
@@ -903,7 +949,7 @@
 				&kp LS(LC(TAB))				 
 				&kp PG_DN
 				&kp LC(TAB)				 	
-				&kp LC(PAGE_DOWN)		
+				&kp LC(DOWN)		
 				&kp ENTER					
 				
 				// ----------------------------------------
@@ -1026,50 +1072,50 @@
 
 				// ----------------------------------------
 
-				&kp LG(LA(H))			// #OPEN
-				&kp LA(F1)				//
-				&kp LA(F2)				//
-				&kp LA(F3)				//
-				&kp LA(F4)				//
-				&kp LA(F5)				//
+				&kp LG(LA(H))				// #OPEN
+				&none						//
+				&none						
+				&kp LG(LA(UP))				// 
+				&none						
+				&none						// 
 
-				&kp LG(F1)				//
-				&kp LG(F2)				//
-				&kp LG(F3)				//
-				&kp LG(F4)				//
-				&kp LG(F5)				//
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&kp LG(LA(ESC))			// #OPEN
 		
 				// ----------------------------------------
 
 				&kp LG(LS(TAB))			// #OPEN
-				&kp LA(F6)				//
-				&kp LA(F7)				//
-				&kp LA(F8)				//
-				&kp LA(F9)				//
-				&kp LA(F9)				//
+				&kp LG(LA(LS(LEFT)))		 
+				&kp LG(LA(LEFT))			// 
+				&kp LG(LA(DOWN))			// 
+				&kp LG(LA(RIGHT))			// 
+				&kp LG(LA(LS(RIGHT)))			
 
-				&kp LC(F6)				//
-				&kp LC(F7)				//
-				&kp LC(F8)				//
-				&kp LC(F9)				//
-				&kp LC(F10)				//
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&kp LG(LS(F4))
 
 				// ----------------------------------------
 
 				&kp LG(LS(F5))
-				&kp LA(F11)				//
-				&kp LA(F12)				//
-				&kp LA(F13)				//
-				&kp LA(F14)				//
-				&kp LA(F15)				//
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 
-				&kp LG(F11)				//
-				&kp LG(F12)				//
-				&kp LG(F13)				//
-				&kp LG(F14)				//
-				&kp LG(F15)				//
+				&none						//
+				&none						//
+				&none						// 
+				&none						//
+				&none						// 
 				&kp LG(LS(F6))
 		
 				// ----------------------------------------
@@ -1103,11 +1149,11 @@
 				// ----------------------------------------
 
 				&kp LG(LA(ENTER))			// 
-				&none						//
-				&kp LS(TAB)						
-				&kp LG(LA(UP))				// 
-				&kp TAB						
-				&none						// 
+				&kp PG_UP					//
+				&kp LS(TAB)
+				&kp UP						// 
+				&kp TAB
+				&kp HOME						// 
 
 				&bt BT_CLR
 				&bt BT_SEL 0
@@ -1119,16 +1165,16 @@
 				// ----------------------------------------
 		
 				&none						//
-				&kp LG(LA(LS(LEFT)))		 
-				&kp LG(LA(LEFT))			// 
-				&kp LG(LA(DOWN))			// 
-				&kp LG(LA(RIGHT))			// 
-				&kp LG(LA(LS(RIGHT)))			
+				&kp PG_DN						//
+				&kp LEFT
+				&kp DOWN
+				&kp RIGHT
+				&kp END
 
 				&none						//
+				&kp LCTL					//
 				&kp LGUI					//
-				&none						// 
-				&none						//
+				&kp LALT					//
 				&none						// 
 				&none						//
 
@@ -1193,8 +1239,8 @@
 
 				&kp LG(LS(F8))
 				&kp LG(A)
-				&kp LG(DEL)	
-				&kp LG(INSERT)	
+				&kp LC(LA(E))
+				&kp LC(LA(N))
 				&kp LG(C)			
 				&kp LG(X)
 
@@ -1266,8 +1312,8 @@
 
 				&kp LG(LS(F11))		
 				&kp LG(LS(A))
-				&kp LG(LS(DEL))	
-				&kp LG(LS(INSERT))	
+				&kp LC(LA(LS(E)))
+				&kp LC(LA(LS(N)))
 				&kp LG(LS(C))			
 				&kp LG(LS(X))
 
@@ -2065,18 +2111,18 @@
 
 				// ----------------------------------------
 
-				&kp LC(LA(LS(B)))
+				&kp LA(LEFT)
 				&kp LC(HOME)				// @Home Sprung
 				&kp LS(TAB)
 				&kp UP						// @Up
 				&kp TAB
-				&kp LC(LA(LS(G)))
+				&kp LA(RIGHT)
 
 				&kp LC(LA(C))	
 				&kp LC(LA(L))			
 				&kp PG_UP
 				&kp LC(LA(R))		 	 
-				&kp LC(PAGE_UP)
+				&kp LC(UP)
 				&kp BSPC					
 
 				// ----------------------------------------
@@ -2092,7 +2138,7 @@
 				&kp LS(LC(TAB))			 	// 
 				&kp PG_DN
 				&kp LC(TAB)				 	// 
-				&kp LC(PAGE_DOWN)
+				&kp LC(DOWN)
 				&kp ENTER					// -
 				
 				// ----------------------------------------
@@ -2157,17 +2203,17 @@
 				// ----------------------------------------
 
 				&kp LA(TAB)
-				&kp LG(LA(LC(N1)))				// 1
-				&kp LG(LA(LC(N2)))				// 2
-				&kp LG(LA(LC(N3)))				// 3
-				&kp LG(LA(LC(N4)))				// 4
-				&kp LG(LA(LC(N5)))				// 5
+				&kp LC(LG(N1))			//
+				&kp LC(LG(N2))			//
+				&kp LC(LG(N3))			//
+				&kp LC(LG(N4))			//
+				&kp LC(LG(N5))			//
 
-				&kp LG(LA(LC(N6)))				// 6
-				&kp LG(LA(LC(N7)))				// 7
-				&kp LG(LA(LC(N8)))				// 8
-				&kp LG(LA(LC(N9)))				// 9
-				&kp LG(LA(LC(N0)))				// 0
+				&kp LC(LG(N6))			//
+				&kp LC(LG(N7))			//
+				&kp LC(LG(N8))			//
+				&kp LC(LG(N9))			//
+				&kp LC(LG(N0))			//
 				&kp LG(LS(F16))
 
 				// ----------------------------------------
@@ -2217,9 +2263,9 @@
 				// ----------------------------------------
 
 				&kp LG(D)				// Hide all
+				&kp LG(PG_UP)
 				&none
-				&none
-				&none
+				&wWinUp
 				&none
 				&none
 
@@ -2233,17 +2279,17 @@
 				// ----------------------------------------
 
 				&kp LG(TAB)				// #OPEN
-				&kp LC(LG(N1))			//
-				&kp LC(LG(N2))			//
-				&kp LC(LG(N3))			//
-				&kp LC(LG(N4))			//
-				&kp LC(LG(N5))			//
+				&kp LG(PG_DN)
+				&wWinLeft
+				&wWinDown
+				&wWinRight
+				&none
 
-				&kp LC(LG(N6))			//
-				&kp LC(LG(N7))			//
-				&kp LC(LG(N8))			//
-				&kp LC(LG(N9))			//
-				&kp LC(LG(N0))			//
+				&none
+				&none
+				&none
+				&none
+				&none
 				&kp LG(LS(F4))
 
 				// ----------------------------------------
@@ -2294,11 +2340,11 @@
 				// ----------------------------------------
 
 				&kp LC(LA(ENTER))			//
-				&none						//
+				&kp PG_UP					//
 				&kp LS(TAB)
-				&kp LC(LA(UP))				// 
+				&kp UP						// 
 				&kp TAB
-				&none						// 
+				&kp HOME						// 
 
 				&bt BT_CLR
 				&bt BT_SEL 0
@@ -2310,16 +2356,16 @@
 				// ----------------------------------------
 		
 				&none						//
-				&none						//
-				&kp LC(LA(LEFT))			// 
-				&kp LC(LA(DOWN))			// 
-				&kp LC(LA(RIGHT))			// 
-				&none						//
+				&kp PG_DN						//
+				&kp LEFT
+				&kp DOWN
+				&kp RIGHT
+				&kp END
 
 				&none						//
-				&kp LALT					//
-				&none						// 
-				&none						//
+				&kp LCTRL					//
+				&kp LALT					// 
+				&kp LGUI					//
 				&none						// 
 				&none						//
 
@@ -2385,12 +2431,12 @@
 
 				&kp LG(LS(F8))
 				&kp LC(A)
-				&kp LG(DEL)
+				&kp LG(DEL)	
 				&kp LG(INSERT)	
 				&kp LC(C)			
 				&kp LC(X)
 
-				&kp LC(LA(H))	
+				&kp LC(LA(H))
 				&kp LC(V)
 				&kp LC(LA(I))	
 				&kp LC(LA(U))	
@@ -2458,7 +2504,7 @@
 
 				&kp LG(LS(F11))
 				&kp LC(LS(A))
-				&kp LG(LS(DEL))
+				&kp LG(LS(DEL))	
 				&kp LG(LS(INSERT))
 				&kp LC(LS(C))			
 				&kp LC(LS(X))
@@ -2907,9 +2953,9 @@
 				&kp C_PLAY	
 				&none
 
-				&kp LA(LG(F1)) 					
-				&kp LA(LG(F2)) 					
-				&kp LA(LG(F3))					
+				&kp LA(LG(LC(U))) 					
+				&kp LS(LG(S))
+				&kp LG(E)
 				&kp LA(LG(F4)) 					
 				&kp LA(LG(F5)) 					
 				&kp LA(ENTER)				// 
@@ -2923,11 +2969,11 @@
 				&none
 				&none
 
-				&kp LA(LG(F6)) 					
-				&kp LA(LG(F7)) 					
+				&kp LC(F1)
+				&kp LA(E)
 				&kp LA(LG(F8)) 					
 				&kp LA(LG(F9)) 					
-				&kp LA(LG(F10)) 					
+				&kp LG(A)					
 				&turnOnWin
 
 				// ----------------------------------------
