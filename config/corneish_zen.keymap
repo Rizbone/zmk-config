@@ -1074,9 +1074,9 @@
 
 				&kp LG(LA(H))				// #OPEN
 				&none						//
-				&none						
+				&kp LG(LA(KP_MINUS))		// Reset
 				&kp LG(LA(UP))				// 
-				&none						
+				&kp LG(LA(KP_PLUS))			// Vollbild
 				&kp LG(LA(ENTER))			// 
 
 				&kp LG(LA(F6)) 					
