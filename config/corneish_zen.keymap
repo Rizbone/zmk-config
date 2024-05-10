@@ -469,7 +469,6 @@
     	};
 
 
-
 		wFuncMarkLine: wFuncMarLine {
             label = "wFuncMarkLine";
             compatible = "zmk,behavior-macro";
