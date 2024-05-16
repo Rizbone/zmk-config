@@ -12,8 +12,6 @@
 #define mNR 1
 #define mNRhard 2
 #define mLCHAR 3
-
-
 #define mNAV 4
 
 #define mPRG 5
@@ -30,34 +28,31 @@
 #define mGUI 13
 
 #define mSShift 14
-#define mSSShift 15
 
 
 // ------- WIN -------------------
 
 
-#define wCHAR 16
-#define wNR 17
-#define wNRhard 18
-#define wLCHAR 19
+#define wCHAR 15
+#define wNR 16
+#define wNRhard 17
+#define wLCHAR 18
+#define wNAV 19
 
-#define wNAV 20
+#define wPRG 20
+#define wSPRG 21
+#define wPNAV 22
 
-#define wPRG 21
-#define wSPRG 22
-#define wPNAV 23
+#define wFUNC 23
+#define wSFUNC 24
+#define wAlter 25
 
-#define wFUNC 24
-#define wSFUNC 25
-#define wAlter 26
+#define wSYM 26
+#define wSSYM 27
 
-#define wSYM 27
-#define wSSYM 28
+#define wGUI 28
 
-#define wGUI 29
-
-#define wSShift 30
-#define wSSShift 31
+#define wSShift 29
 
 
 
@@ -73,15 +68,6 @@
 / {
 
     behaviors {
-
-
-		sl_mo: behavior_sl_mo {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "hold-preferred";
-			tapping-term-ms = <200>;
-			bindings = <&sl>, <&mo>;
-		};
 
 		// ------------------------- MAC ---------------------
 	
@@ -118,6 +104,15 @@
             bindings = <&sl mNAV>, <&to mCHAR>;
         };
 
+		mdResShift: tap_dance_mdResShift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_mdResShift";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&mNavShift>, <&to mCHAR>;
+        };
+
+
 
 		// ------------------------- WiN ---------------------
 
@@ -149,6 +144,14 @@
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
             bindings = <&sl wNAV>, <&to wCHAR>;
+        };
+
+		mdResShiftWin: tap_dance_mdResShiftWin {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_mdResShiftWin";
+            #binding-cells = <0>;
+            tapping-term-ms = <1000>;
+            bindings = <&wNavShift>, <&to wCHAR>;
         };
 
     };
@@ -290,28 +293,6 @@
 
 
 
-		mFuncMarkLine: mFuncMarLine {
-            label = "mFuncMarkLnie";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&kp LG(RIGHT)>
-				, <&kp LS(LG(LEFT))>
-                ;
-    	};
-
-		mFuncMarkWord: mFuncMarkWord {
-            label = "mFuncMarkWord";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&kp LA(RIGHT)>
-				, <&kp LS(LA(LEFT))>
-                ;
-    	};
-
-
-
 		mAlterShift: mAlterShift {
             label = "mAlterShift";
             compatible = "zmk,behavior-macro";
@@ -360,17 +341,6 @@
 				;
     	};
 
-		mDeepShift: mDeepShift {
-            label = "mDeepShift";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to mCHAR>
-                , <&macro_press &sl mSSShift>
-    			, <&macro_pause_for_release>
-				, <&macro_release &sl mSSShift>
-				;
-    	};
 
 
 		// ------------------------- WiN ---------------------
@@ -478,27 +448,6 @@
     	};
 
 
-		wFuncMarkLine: wFuncMarLine {
-            label = "wFuncMarkLine";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&kp END>
-				, <&kp LS(HOME)>
-                ;
-    	};
-
-		wFuncMarkWord: wFuncMarkWord {
-            label = "wFuncMarkWord";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&kp LC(RIGHT)>
-				, <&kp LC(LS(LEFT))>
-                ;
-    	};
-
-
 
 		wAlterShift: wAlterShift {
             label = "wAlterShift";
@@ -549,18 +498,9 @@
 				;
     	};
 
-		wDeepShift: wDeepShift {
-            label = "wDeepShift";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to wCHAR>
-                , <&macro_press &sl wSSShift>
-    			, <&macro_pause_for_release>
-				, <&macro_release &sl wSSShift>
-				;
-    	};
 
+
+		// specials
 
 		wAltShot: wAltShot {
             label = "wAltShot";
@@ -625,7 +565,6 @@
 	
 
 
-
 		// Reset
 
 		wReset: wReset {
@@ -641,6 +580,9 @@
 				, <&macro_release  &kp LALT>
                 ; 
     	};
+
+
+
 	};
 
 
@@ -721,13 +663,14 @@
 				&sl mSYM
 				&kp SPACE
 				&sl mFUNC
-				&sl_mo mPRG mPRG
+				&sl mPRG 
 				&mdRes
 				&mdNr
 
 				// ----------------------------------------
 			>;
 		};
+
 
 
 		// -----------------------------------------------------|
@@ -794,7 +737,7 @@
 				&mSpaceReset 
 				&mFuncReset
 				&mPrgReset
-				&mdRes
+				&mNavShift
 				&none
 			>;		
 		};
@@ -864,7 +807,7 @@
 				&sl mSYM
 				&kp SPACE
 				&sl mFUNC
-				&sl mPRG
+				&sl mPRG 
 				&mdRes
 				&mdNr
 			>;		
@@ -948,7 +891,7 @@
 
 
 		// -----------------------------------------------------|
-		// Layer = 4 - - Navigation						|
+		// Layer = 4 - - Navigation								|
 		// -----------------------------------------------------|
 
 		mac_navigation
@@ -1010,7 +953,7 @@
 				&sl mSYM
 				&kp SPACE				
 				&sl mFUNC
-				&sl mPRG
+				&sl mPRG 
 				&mdRes
 				&mdNr
 
@@ -1110,11 +1053,11 @@
 				// ----------------------------------------
 
 				&kp LG(LA(H))				// #OPEN
-				&none						//
-				&kp LG(LA(KP_MINUS))		// Reset
-				&kp LG(LA(UP))				// 
-				&kp LG(LA(KP_PLUS))			// Vollbild
-				&kp LG(LA(ENTER))			// 
+				&kp LG(LA(F1)) 					
+				&kp LG(LA(F2)) 					
+				&kp LG(LA(F3)) 					
+				&kp LG(LA(F4)) 					
+				&kp LG(LA(F5)) 
 
 				&kp LG(LA(F6)) 					
 				&kp LG(LA(F7)) 					
@@ -1126,27 +1069,27 @@
 				// ----------------------------------------
 
 				&kp LG(LS(TAB))			// #OPEN
-				&kp LG(LA(LS(LEFT)))		 
-				&kp LG(LA(LEFT))			// 
-				&kp LG(LA(DOWN))			// 
-				&kp LG(LA(RIGHT))			// 
-				&kp LG(LA(LS(RIGHT)))			
+				&kp LG(LC(F1)) 					
+				&kp LG(LC(F2)) 					
+				&kp LG(LC(F3)) 					
+				&kp LG(LC(F4)) 					
+				&kp LG(LC(F5)) 	
 
-				&kp LA(LG(LC(F1))) 					
-				&kp LA(LG(LC(F2))) 					
-				&kp LA(LG(LC(F3))) 					
-				&kp LA(LG(LC(F4))) 					
-				&kp LA(LG(LC(F5))) 	
+				&kp LG(LC(F6)) 					
+				&kp LG(LC(F7)) 					
+				&kp LG(LC(F8)) 					
+				&kp LG(LC(F9)) 					
+				&kp LG(LC(F10)) 	
 				&kp LG(LS(F4))
 
 				// ----------------------------------------
 
 				&kp LG(LS(F5))
-				&none						// 
-				&none						//
-				&none						// 
-				&none						// 
-				&none						// 
+				&kp LA(LG(LC(F1))) 					
+				&kp LA(LG(LC(F2))) 					
+				&kp LA(LG(LC(F3))) 					
+				&kp LA(LG(LC(F4))) 					
+				&kp LA(LG(LC(F5))) 	
 
 				&kp LA(LG(LC(F6))) 					
 				&kp LA(LG(LC(F7))) 					
@@ -1193,11 +1136,11 @@
 				&kp BACKSPACE				 
 
 				&bt BT_CLR
-				&bt BT_SEL 0
 				&bt BT_SEL 1
 				&bt BT_SEL 2
-				&none
+				&bt BT_SEL 3
 				&sys_reset
+				&none
 				
 
 				// ----------------------------------------
@@ -1225,11 +1168,11 @@
 				&kp END
 				&none						// 
 
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
+				&kp C_PLAY					//
+				&kp C_PREV					//
+				&kp C_VOL_DN						// 
+				&kp C_VOL_UP						//
+				&kp C_NEXT					// 
 				&none						//
 
 				// ----------------------------------------
@@ -1704,49 +1647,49 @@
 				// ----------------------------------------
 
 				&kp ESC						// 
-				&none
-				&none
-				&kp C_VOL_UP
-				&none
-				&none
+				&kp LC(LS(F1))
+				&kp LC(LS(F2))
+				&kp LC(LS(F3))
+				&kp LC(LS(F4))
+				&kp LC(LS(F5))
 
-				&kp LG(LA(F1)) 					
-				&kp LG(LA(F2)) 					
-				&kp LG(LA(F3)) 					
-				&kp LG(LA(F4)) 					
-				&kp LG(LA(F5)) 
-				&kp DEL				//
+				&kp LG(LA(ENTER))			// 						//
+				&kp LG(LA(KP_MINUS))		// Reset
+				&kp LG(LA(UP))				// 
+				&kp LG(LA(KP_PLUS))			// Vollbild
+				&kp LG(LA(LC(ENTER)))			// 	
+				&kp BACKSPACE
 
 				// ----------------------------------------
 		
-				&mDeepShift
-				&none	
-				&kp K_MUTE
-				&kp C_VOL_DN
-				&kp C_PLAY						
 				&none
+				&kp LC(LS(F6))
+				&kp LC(LS(F7))
+				&kp LC(LS(F8))
+				&kp LC(LS(F9))
+				&kp LC(LS(F10))
 
-				&kp LG(LC(F1))
-				&kp LG(LC(F2))
-				&kp LG(LC(F3)) 					
-				&kp LG(LC(F4)) 					
-				&kp LG(LC(F5))	
+				&kp LG(LA(LS(LEFT)))		 
+				&kp LG(LA(LEFT))			// 
+				&kp LG(LA(DOWN))			// 
+				&kp LG(LA(RIGHT))			// 
+				&kp LG(LA(LS(RIGHT)))					
 				&kp LC(ENTER)				// 
 
 				// ----------------------------------------
 
 				&turnOnMac
-				&none
-				&kp C_NEXT
-				&kp C_PREV
-				&none
-				&none
+				&kp LC(LS(F11))
+				&kp LC(LS(F12))
+				&kp LC(LS(F13))
+				&kp LC(LS(F14))
+				&kp LC(LS(F15))
 
-				&kp LG(LC(F6))
-				&kp LG(LC(F7))
-				&kp LG(LC(F8)) 					
-				&kp LG(LC(F9)) 					
-				&kp LG(LC(F10))	
+				&kp LC(F11)
+				&kp LG(HOME)
+				&kp LG(LS(HOME))				
+				&kp LG(LS(END))				
+				&kp LG(END)
 				&turnOnWin
 
 				// ----------------------------------------
@@ -1762,79 +1705,6 @@
 			>;
 		};
 
-
-
-
-		// -----------------------------------------------------|
-		// Layer 19 - mSideShift =	Side Shift					|
-		// -----------------------------------------------------|
-
-		mac_mSSShift
-		{
-			label = "MAC";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&kp ESC						// 
-				&none	
-				&none	
-				&kp C_VOL_UP
-				&none
-				&none
-
-				&kp LC(LS(F1)) 									
-				&kp LC(LS(F2)) 					
-				&kp LC(LS(F3)) 					
-				&kp LC(LS(F4)) 					
-				&kp LC(LS(F5)) 					
-				&kp DEL				//
-
-				// ----------------------------------------
-		
-				&mDeepShift
-				&none	
-				&kp K_MUTE
-				&kp C_VOL_DN
-				&kp C_PLAY
-				&none
-
-				&kp LC(LS(F6)) 					
-				&kp LC(LS(F7)) 					
-				&kp LC(LS(F8)) 					
-				&kp LC(LS(F9)) 					
-				&kp LC(LS(F10)) 					
-				&kp LA(ENTER)				// 
-
-				// ----------------------------------------
-
-				&turnOnMac
-				&none
-				&kp C_NEXT
-				&kp C_PREV
-				&none
-				&none
-
-				&kp LC(LS(F11)) 					
-				&kp LC(LS(F12)) 					
-				&kp LC(LS(F13)) 					
-				&kp LC(LS(F14)) 					
-				&kp LC(LS(F15)) 
-				&turnOnWin
-
-				// ----------------------------------------
-		
-				&none
-				&kp LG(LS(SPACE))
-				&mAlterShift				
-				&mPNAVShift					
-				&mdRes			
-				&mNrShift
-
-				// ----------------------------------------
-			>;
-		};
 
 
 
@@ -1908,7 +1778,7 @@
 				&sl wSYM
 				&kp SPACE
 				&sl wFUNC
-				&sl_mo wPRG wPRG
+				&sl wPRG 
 				&mdResWin
 				&mdNrWin
 
@@ -1982,7 +1852,7 @@
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&mdResWin
+				&wNavShift
 				&none
 			>;		
 		};
@@ -2052,7 +1922,7 @@
 				&sl wSYM
 				&kp SPACE
 				&sl wFUNC
-				&sl wPRG
+				&sl wPRG 
 				&mdResWin
 				&none
 			>;		
@@ -2198,7 +2068,7 @@
 				&sl wSYM
 				&kp SPACE				
 				&sl wFUNC
-				&sl wPRG
+				&sl wPRG 
 				&mdResWin
 				&mdNrWin
 
@@ -2299,11 +2169,11 @@
 				// ----------------------------------------
 
 				&kp LG(D)				// Hide all
-				&kp LG(PG_UP)
-				&kp LG(LS(LEFT))
-				&wWinUp
-				&kp LG(LS(RIGHT))
-				&kp LC(LA(ENTER))			
+				&kp LG(LA(F1)) 					
+				&kp LG(LA(F2)) 					
+				&kp LG(LA(F3)) 					
+				&kp LG(LA(F4)) 					
+				&kp LG(LA(F5)) 			
 
 				&kp LG(LA(F6)) 					
 				&kp LG(LA(F7)) 					
@@ -2315,27 +2185,27 @@
 				// ----------------------------------------
 
 				&kp LG(LS(TAB))				
-				&kp LG(PG_DN)
-				&wWinLeft
-				&wWinDown
-				&wWinRight
-				&none
+				&kp LG(LC(F1)) 					
+				&kp LG(LC(F2)) 					
+				&kp LG(LC(F3))					
+				&kp LG(LC(F4)) 					
+				&kp LG(LC(F5)) 	
 
-				&kp LA(LG(LC(F1))) 					
-				&kp LA(LG(LC(F2))) 					
-				&kp LA(LG(LC(F3))) 					
-				&kp LA(LG(LC(F4))) 					
-				&kp LA(LG(LC(F5))) 	
+				&kp LG(LC(F6)) 					
+				&kp LG(LC(F7)) 					
+				&kp LG(LC(F8))					
+				&kp LG(LC(F9)) 					
+				&kp LG(LC(F10)) 	
 				&kp LG(LS(F4))
 
 				// ----------------------------------------
 
 				&kp LG(LS(F5))
-				&none
-				&none
-				&none
-				&none
-				&none
+				&kp LA(LG(LC(F1))) 					
+				&kp LA(LG(LC(F2))) 					
+				&kp LA(LG(LC(F3))) 					
+				&kp LA(LG(LC(F4))) 					
+				&kp LA(LG(LC(F5))) 	
 
 				&kp LA(LG(LC(F6))) 					
 				&kp LA(LG(LC(F7))) 					
@@ -2375,7 +2245,7 @@
 
 				// ----------------------------------------
 
-				&kp LC(LA(ENTER))			//
+				&kp ESC
 				&kp PG_UP					//
 				&kp LS(TAB)
 				&kp UP						// 
@@ -2383,11 +2253,11 @@
 				&kp BACKSPACE
 
 				&bt BT_CLR
-				&bt BT_SEL 0
 				&bt BT_SEL 1
 				&bt BT_SEL 2
-				&none
+				&bt BT_SEL 3
 				&sys_reset
+				&none
 
 				// ----------------------------------------
 		
@@ -2414,11 +2284,11 @@
 				&kp END
 				&none						// 
 
-				&none						//
-				&none						//
-				&none						// 
-				&none						//
-				&none						// 
+				&kp C_PLAY					//
+				&kp C_PREV					//
+				&kp C_VOL_DN						// 
+				&kp C_VOL_UP						//
+				&kp C_NEXT					// 
 				&none						//
 
 				// ----------------------------------------
@@ -2897,47 +2767,47 @@
 				&wReset
 				&none
 				&none
-				&kp C_VOL_UP
 				&none
-				&none
+				&kp LC(F1)
+				&kp LC(LA(DELETE))
 
-				&kp LG(LA(F1)) 					
-				&kp LG(LA(F2)) 					
-				&kp LG(LA(F3)) 					
-				&kp LG(LA(F4)) 					
-				&kp LG(LA(F5)) 						
-				&kp DEL				//
+				&kp LC(LA(ENTER))	
+				&kp LG(LS(LEFT))
+				&wWinUp
+				&kp LG(LS(RIGHT))
+				&kp LG(PG_UP)				
+				&kp BACKSPACE			
 
 				// ----------------------------------------
 		
-				&wDeepShift
 				&none
-				&kp K_MUTE
-				&kp C_VOL_DN
-				&kp C_PLAY	
 				&none
+				&none
+				&kp LC(LA(LG(U)))
+				&kp LG(LS(S))
+				&kp LG(A)
 
-				&kp LG(LC(F1))
-				&kp LG(LC(F2))
-				&kp LG(LC(F3)) 					
-				&kp LG(LC(F4)) 					
-				&kp LG(LC(F5))				
+				&kp LC(LA(LG(ENTER)))	
+				&wWinLeft
+				&wWinDown
+				&wWinRight
+				&kp LG(PG_DN)			
 				&kp LC(ENTER)				// 
 
 				// ----------------------------------------
 
 				&turnOnMac
 				&none
-				&kp C_NEXT
-				&kp C_PREV
 				&none
-				&none
+				&kp LG(O)
+				&kp LG(E)
+				&kp LG(L)
 
-				&kp LG(LC(F6))
-				&kp LG(LC(F7))
-				&kp LG(LC(F8)) 					
-				&kp LG(LC(F9)) 					
-				&kp LG(LC(F10))
+				&kp LG(D)
+				&kp LG(HOME)
+				&kp LG(LS(HOME))			
+				&kp LG(LS(END))			
+				&kp LG(END)
 				&turnOnWin
 
 				// ----------------------------------------
@@ -2952,80 +2822,6 @@
 				// ----------------------------------------
 			>;
 		};
-
-
-		// -----------------------------------------------------|
-		// Layer 19 - mSideShift =	Side Shift					|
-		// -----------------------------------------------------|
-
-		win_mSSShift
-		{
-			label = "win";
-
-			bindings = <
-
-				// ----------------------------------------
-
-				&wReset
-				&none
-				&none
-				&kp C_VOL_UP
-				&none
-				&none
-
-				&none
-				&none
-				&none				
-				&kp LC(LA(DEL)) 					
-				&kp LG(L) 					
-				&kp DEL				//
-
-				// ----------------------------------------
-		
-				&wDeepShift
-				&none
-				&kp K_MUTE
-				&kp C_VOL_DN
-				&kp C_PLAY	
-				&none
-
-				&kp LA(LG(LC(U))) 					
-				&kp LS(LG(S))
-				&kp LG(E)
-				&none
-				&none
-				&kp LA(ENTER)				// 
-
-				// ----------------------------------------
-
-				&turnOnMac
-				&none
-				&kp C_NEXT
-				&kp C_PREV
-				&none
-				&none
-
-				&kp LC(F1)
-				&kp LA(E)
-				&none				
-				&none
-				&kp LG(A)					
-				&turnOnWin
-
-				// ----------------------------------------
-		
-				&none
-				&kp LG(LS(S))
-				&wAlterShift				// 
-				&wPNAVShift					//
-				&mdResWin		
-				&wNrShift
-
-				// ----------------------------------------
-			>;
-		};
-
-
 
 
 
