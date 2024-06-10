@@ -616,7 +616,7 @@
 				&wSpaceReset 
 				&wFuncReset
 				&wPrgReset
-				&wNavReset
+				&sl wNAV
 				&wMdNr
 
 				// ----------------------------------------		
